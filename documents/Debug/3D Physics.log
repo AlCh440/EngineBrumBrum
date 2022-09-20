@@ -1,0 +1,103 @@
+﻿  Application.cpp
+  Color.cpp
+  glmath.cpp
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(12,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(27,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(43,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(53,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(53,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(72,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(87,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(103,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(600,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(618,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(618,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(758,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(778,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\albertcf5\Downloads\yeet\glmath.cpp(778,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Light.cpp
+  log.cpp
+  Main.cpp
+  ModuleAudio.cpp
+  ModuleCamera3D.cpp
+  ModuleInput.cpp
+  ModulePhysics3D.cpp
+  ModulePlayer.cpp
+  ModuleRenderer3D.cpp
+  ModuleSceneIntro.cpp
+  ModuleWindow.cpp
+  PhysBody3D.cpp
+  PhysVehicle3D.cpp
+  Primitive.cpp
+  Timer.cpp
+  Generating Code...
+BulletDynamics_debug.lib(btDiscreteDynamicsWorld.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btDiscreteDynamicsWorld.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletDynamics_debug.lib(btRigidBody.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btRigidBody.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletDynamics_debug.lib(btConeTwistConstraint.obj) : warning LNK4099: PDB '' was not found with 'BulletDynamics_debug.lib(btConeTwistConstraint.obj)' or at ''; linking object as if no debug info
+BulletDynamics_debug.lib(btContactConstraint.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btContactConstraint.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletDynamics_debug.lib(btGeneric6DofConstraint.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btGeneric6DofConstraint.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletDynamics_debug.lib(btHingeConstraint.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btHingeConstraint.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletDynamics_debug.lib(btPoint2PointConstraint.obj) : warning LNK4099: PDB '' was not found with 'BulletDynamics_debug.lib(btPoint2PointConstraint.obj)' or at ''; linking object as if no debug info
+BulletDynamics_debug.lib(btSequentialImpulseConstraintSolver.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btSequentialImpulseConstraintSolver.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletDynamics_debug.lib(btTypedConstraint.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btTypedConstraint.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletDynamics_debug.lib(btRaycastVehicle.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btRaycastVehicle.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletDynamics_debug.lib(btWheelInfo.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletDynamics_debug.lib(btWheelInfo.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btDbvt.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btDbvt.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btDbvtBroadphase.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btDbvtBroadphase.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btDispatcher.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btDispatcher.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btOverlappingPairCache.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btOverlappingPairCache.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btQuantizedBvh.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btQuantizedBvh.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btActivatingCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btActivatingCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btBoxBoxCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btBoxBoxCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btBoxBoxDetector.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btBoxBoxDetector.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCollisionDispatcher.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCollisionDispatcher.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCollisionObject.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCollisionObject.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCollisionWorld.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCollisionWorld.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCompoundCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCompoundCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCompoundCompoundCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCompoundCompoundCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btConvexConcaveCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btConvexConcaveCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btConvexConvexAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btConvexConvexAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btConvexPlaneCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btConvexPlaneCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btDefaultCollisionConfiguration.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btDefaultCollisionConfiguration.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btEmptyCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btEmptyCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btHashedSimplePairCache.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btHashedSimplePairCache.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btManifoldResult.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btManifoldResult.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btSimulationIslandManager.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btSimulationIslandManager.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btSphereSphereCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btSphereSphereCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btSphereTriangleCollisionAlgorithm.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btSphereTriangleCollisionAlgorithm.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btUnionFind.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btUnionFind.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(SphereTriangleDetector.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(SphereTriangleDetector.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btBoxShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btBoxShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btBvhTriangleMeshShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btBvhTriangleMeshShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCollisionShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCollisionShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCompoundShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCompoundShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btConcaveShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btConcaveShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btConvexInternalShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btConvexInternalShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btConvexPolyhedron.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btConvexPolyhedron.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btConvexShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btConvexShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btCylinderShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btCylinderShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btOptimizedBvh.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btOptimizedBvh.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btPolyhedralConvexShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btPolyhedralConvexShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btSphereShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btSphereShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btStaticPlaneShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btStaticPlaneShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btTriangleCallback.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btTriangleCallback.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btTriangleMeshShape.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btTriangleMeshShape.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btContinuousConvexCollision.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btContinuousConvexCollision.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btConvexCast.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btConvexCast.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btGjkConvexCast.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btGjkConvexCast.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btGjkEpa2.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btGjkEpa2.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btGjkEpaPenetrationDepthSolver.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btGjkEpaPenetrationDepthSolver.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btGjkPairDetector.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btGjkPairDetector.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btMinkowskiPenetrationDepthSolver.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btMinkowskiPenetrationDepthSolver.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btPersistentManifold.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btPersistentManifold.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btPolyhedralContactClipping.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btPolyhedralContactClipping.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btRaycastCallback.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btRaycastCallback.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btSubSimplexConvexCast.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btSubSimplexConvexCast.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+BulletCollision_debug.lib(btVoronoiSimplexSolver.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'BulletCollision_debug.lib(btVoronoiSimplexSolver.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+LinearMath_debug.lib(btAlignedAllocator.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'LinearMath_debug.lib(btAlignedAllocator.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+LinearMath_debug.lib(btConvexHullComputer.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'LinearMath_debug.lib(btConvexHullComputer.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+LinearMath_debug.lib(btGeometryUtil.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'LinearMath_debug.lib(btGeometryUtil.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+LinearMath_debug.lib(btQuickprof.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'LinearMath_debug.lib(btQuickprof.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+LinearMath_debug.lib(btVector3.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'LinearMath_debug.lib(btVector3.obj)' or at 'C:\Users\albertcf5\Downloads\yeet\Debug\vc140.pdb'; linking object as if no debug info
+  3D Physics.vcxproj -> C:\Users\albertcf5\Downloads\yeet\Debug\3D Physics - class5.exe
