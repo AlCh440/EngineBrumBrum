@@ -16,6 +16,9 @@
     <Filter Include="Sources\Helpers">
       <UniqueIdentifier>{121f8e6b-df36-4ab0-be0d-601ddfc9e503}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sources\Tries">
+      <UniqueIdentifier>{1e8231ae-8032-4b7b-b6f7-df573f7d07c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Module.h">
@@ -54,6 +57,12 @@
     <ClInclude Include="Timer.h">
       <Filter>Sources\Tools</Filter>
     </ClInclude>
+    <ClInclude Include="p2List.h" />
+    <ClInclude Include="p2DynArray.h" />
+    <ClInclude Include="p2Point.h" />
+    <ClInclude Include="ModuleScene_01.h">
+      <Filter>Sources\Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleAudio.cpp">
@@ -91,6 +100,12 @@
     </ClCompile>
     <ClCompile Include="Light.cpp">
       <Filter>Sources\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Blue_tool.cpp">
+      <Filter>Sources\Tries</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleScene_01.cpp">
+      <Filter>Sources\Modules</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

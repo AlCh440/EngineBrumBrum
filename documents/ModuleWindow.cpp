@@ -1,6 +1,10 @@
 #include "Globals.h"
 #include "Application.h"
 #include "ModuleWindow.h"
+#include "imgui-master/imgui.h"
+
+//#include "imgui_impl_dx9.h"
+//#include "imgui_impl_win32.h"
 
 ModuleWindow::ModuleWindow(Application* app, bool start_enabled) : Module(app, start_enabled)
 {

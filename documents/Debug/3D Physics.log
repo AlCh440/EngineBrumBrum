@@ -1,5 +1,28 @@
-﻿  ModuleCamera3D.cpp
+﻿  Application.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(91,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(99,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(107,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+  Main.cpp
+  ModuleAudio.cpp
+  ModuleCamera3D.cpp
   ModuleInput.cpp
-  Timer.cpp
+  ModuleRenderer3D.cpp
+  ModuleScene_01.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(56,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  ModuleWindow.cpp
   Generating Code...
-  3D Physics.vcxproj -> C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Debug\3D Physics - class5.exe
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "bool __cdecl ImGui::Begin(char const *,bool *,int)" (?Begin@ImGui@@YA_NPBDPA_NH@Z) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "void __cdecl ImGui::End(void)" (?End@ImGui@@YAXXZ) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "bool __cdecl ImGui::BeginChild(char const *,struct ImVec2 const &,bool,int)" (?BeginChild@ImGui@@YA_NPBDABUImVec2@@_NH@Z) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "void __cdecl ImGui::EndChild(void)" (?EndChild@ImGui@@YAXXZ) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "void __cdecl ImGui::Text(char const *,...)" (?Text@ImGui@@YAXPBDZZ) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "void __cdecl ImGui::TextColored(struct ImVec4 const &,char const *,...)" (?TextColored@ImGui@@YAXABUImVec4@@PBDZZ) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "bool __cdecl ImGui::ColorEdit4(char const *,float * const,int)" (?ColorEdit4@ImGui@@YA_NPBDQAMH@Z) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "void __cdecl ImGui::PlotLines(char const *,float const *,int,int,char const *,float,float,struct ImVec2,int)" (?PlotLines@ImGui@@YAXPBDPBMHH0MMUImVec2@@H@Z) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "bool __cdecl ImGui::BeginMenuBar(void)" (?BeginMenuBar@ImGui@@YA_NXZ) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "void __cdecl ImGui::EndMenuBar(void)" (?EndMenuBar@ImGui@@YAXXZ) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "bool __cdecl ImGui::BeginMenu(char const *,bool)" (?BeginMenu@ImGui@@YA_NPBD_N@Z) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "void __cdecl ImGui::EndMenu(void)" (?EndMenu@ImGui@@YAXXZ) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "bool __cdecl ImGui::MenuItem(char const *,char const *,bool,bool)" (?MenuItem@ImGui@@YA_NPBD0_N1@Z) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+ModuleScene_01.obj : error LNK2019: unresolved external symbol "double __cdecl ImGui::GetTime(void)" (?GetTime@ImGui@@YANXZ) referenced in function "public: virtual enum update_status __thiscall ModuleScene_01::Update(float)" (?Update@ModuleScene_01@@UAE?AW4update_status@@M@Z)
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Debug\3D Physics - class5.exe : fatal error LNK1120: 14 unresolved externals
