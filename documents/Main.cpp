@@ -31,6 +31,13 @@ int main(int argc, char ** argv)
 
 	ImGui::StyleColorsDark();
 
+	ImGui::StyleColorsDark();
+
+	// Setup Platform/Renderer bindings
+	// window is the SDL_Window*
+	// context is the SDL_GLContext
+	
+
 	int main_return = EXIT_FAILURE;
 	main_states state = MAIN_CREATION;
 	Application* App = NULL;
@@ -93,9 +100,7 @@ int main(int argc, char ** argv)
 
 		}
 	}
-	ImGui_ImplOpenGL3_Shutdown();
-	ImGui_ImplSDL2_Shutdown();
-	ImGui::DestroyContext();
+	
 
 
 	delete App;

@@ -23,6 +23,9 @@ bool ModuleScene_01::Start()
 	App->camera->Move(vec3(1.0f, 1.0f, 0.0f));
 	App->camera->LookAt(vec3(0, 0, 0));
 
+  
+
+ 
 	return ret;
 }
 
@@ -37,8 +40,10 @@ bool ModuleScene_01::CleanUp()
 // Update
 update_status ModuleScene_01::Update(float dt)
 {
-	
-	
+
+  
+   
+
 	return UPDATE_CONTINUE;
 }
 
