@@ -3,8 +3,13 @@
 #include "Globals.h"
 
 #include "SDL/include/SDL.h"
-#pragma comment( lib, "SDL/libx86/SDL2.lib" )
-#pragma comment( lib, "SDL/libx86/SDL2main.lib" )
+#pragma comment( lib, "SDL/lib/x86/SDL2.lib" )
+#pragma comment( lib, "SDL/lib/x86/SDL2main.lib" )
+
+#include "imgui.h"
+#include "imgui_impl_opengl3.h"
+#include "imgui_impl_sdl.h"
+
 
 enum main_states
 {
@@ -18,6 +23,13 @@ enum main_states
 int main(int argc, char ** argv)
 {
 	LOG("Starting game '%s'...", TITLE);
+	SDL_Init(SDL_INIT_EVERYTHING);
+
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+	ImGui::StyleColorsDark();
 
 	int main_return = EXIT_FAILURE;
 	main_states state = MAIN_CREATION;
@@ -81,6 +93,10 @@ int main(int argc, char ** argv)
 
 		}
 	}
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplSDL2_Shutdown();
+	ImGui::DestroyContext();
+
 
 	delete App;
 	LOG("Exiting game '%s'...\n", TITLE);

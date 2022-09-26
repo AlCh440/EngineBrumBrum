@@ -1,7 +1,11 @@
 #include "Globals.h"
 #include "Application.h"
 #include "ModuleScene_01.h"
-#include "imgui-master/imgui.h"
+
+#include "imgui.h"
+#include "imgui_impl_opengl3.h"
+#include "imgui_impl_sdl.h"
+
 
 ModuleScene_01::ModuleScene_01(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
@@ -49,13 +53,13 @@ update_status ModuleScene_01::Update(float dt)
 	float color[4] = { 124, 200, 54, 255 };
 	// Edit a color stored as 4 floats
 	ImGui::ColorEdit4("Color", color);
-
+	
 	// Generate samples and plot them
 	float samples[100];
 	for (int n = 0; n < 100; n++)
 		samples[n] = sinf(n * 0.2f + ImGui::GetTime() * 1.5f);
 	ImGui::PlotLines("Samples", samples, 100);
-
+	
 	// Display contents in a scrolling region
 	ImGui::TextColored(ImVec4(1, 1, 0, 1), "Important Stuff");
 	ImGui::BeginChild("Scrolling");
