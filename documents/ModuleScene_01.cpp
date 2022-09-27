@@ -33,8 +33,7 @@ bool ModuleScene_01::Start()
     // Setup Platform/Renderer bindings
     // window is the SDL_Window*
     // context is the SDL_GLContext
-    ImGui_ImplSDL2_InitForOpenGL(App->window->window, context);
-    ImGui_ImplOpenGL3_Init();
+
  
 	return ret;
 }
@@ -50,22 +49,31 @@ bool ModuleScene_01::CleanUp()
 // Update
 update_status ModuleScene_01::Update(float dt)
 {
+   
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplSDL2_NewFrame(App->window->window);
     ImGui::NewFrame();
   
-    //stuff here
 
+    ImGui::Begin("Custom window",0, ImGuiWindowFlags_MenuBar);
 
-    ImGui::Begin("MyWindow");
-    ImGui::Checkbox("Boolean property", &this->myTryActive);
-   
-   
+    ImGui::ShowDemoWindow();
+
+    ImGui::BeginMainMenuBar();
+    ImGui::Text("Main Menu");
+    
+    if (ImGui::Button(" Close", ImVec2(100, 20)))
+    {
+        return UPDATE_STOP;
+    }
+
+    ImGui::EndMainMenuBar();
+
+    ImGui::BeginMenuBar();
+    ImGui::Text("happy bar");
+    ImGui::EndMenuBar();
+
     ImGui::End();
-
-
-
-
 
 	return UPDATE_CONTINUE;
 }

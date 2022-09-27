@@ -26,15 +26,12 @@ int main(int argc, char ** argv)
 	LOG("Starting game '%s'...", TITLE);
 	SDL_Init(SDL_INIT_EVERYTHING);
 
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
-	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, 0);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
 
-	ImGui::StyleColorsDark();
-
-	// Setup Platform/Renderer bindings
-	// window is the SDL_Window*
-	// context is the SDL_GLContext
+	
 	
 
 	int main_return = EXIT_FAILURE;

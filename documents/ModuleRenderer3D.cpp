@@ -102,7 +102,7 @@ bool ModuleRenderer3D::Init()
 
 		
 	render = SDL_CreateRenderer(App->window->window, -1, SDL_RENDERER_ACCELERATED);
-
+	
 	// Projection matrix for
 	OnResize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
