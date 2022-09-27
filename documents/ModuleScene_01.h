@@ -22,4 +22,5 @@ public:
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
 
 	bool myToolActive = true;
+	bool myTryActive = true;
 };

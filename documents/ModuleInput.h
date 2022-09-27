@@ -66,5 +66,7 @@ private:
 	int mouse_z;
 	int mouse_x_motion;
 	int mouse_y_motion;
+
+	SDL_Event e;
 	//int mouse_z_motion;
 };

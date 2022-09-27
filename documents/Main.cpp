@@ -7,6 +7,7 @@
 #pragma comment( lib, "SDL/lib/x86/SDL2main.lib" )
 
 #include "imgui.h"
+
 #include "imgui_impl_opengl3.h"
 #include "imgui_impl_sdl.h"
 
@@ -28,8 +29,6 @@ int main(int argc, char ** argv)
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
-
-	ImGui::StyleColorsDark();
 
 	ImGui::StyleColorsDark();
 
