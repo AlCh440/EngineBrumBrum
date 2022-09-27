@@ -71,13 +71,50 @@ bool Application::Init()
 // ---------------------------------------------
 void Application::PrepareUpdate()
 {
-	dt = (float)ms_timer.Read() / 1000.0f;
-	ms_timer.Start();
+	frameCount++;
+	lastSecFrameCount++;
+	dt = frameDuration.ReadMs();
+	frameDuration.Start();
 }
 
 // ---------------------------------------------
 void Application::FinishUpdate()
 {
+
+	float secondsSinceStartup = startupTime.Read();
+
+	if (lastSecFrameTime.Read() > 1000) {
+		lastSecFrameTime.Start();
+		framesPerSecond = lastSecFrameCount;
+		lastSecFrameCount = 0;
+		averageFps = (averageFps + framesPerSecond) / 2;
+	}
+
+	//LOG("FPS: %f", (float)framesPerSecond);
+
+	static char title[256];
+	//sprintf_s(title, 256, "Av.FPS: %.2f FPS: %i Delta Time: %.3f Time since startup: %.3f Frame Count: %I64u ",
+	//	averageFps, framesPerSecond, dt, secondsSinceStartup, frameCount);
+	/*int x,y;
+	input->GetMouseWorldPosition(x,y);
+	sprintf_s(title, 256, "Mouse position x %d y %d, Camera x %d y %d", x, y,render->camera.x,render->camera.y);*/
+
+
+	sprintf_s(title, 256, "FPS: %i Tile:[%d,%d] ", framesPerSecond);
+
+
+
+
+	float delay = float(1000 / maxFrameRate) - frameDuration.ReadMs();
+
+
+
+	PerfTimer* delayt = new PerfTimer();
+	delayt->Start();
+	if (maxFrameRate > 0 && delay > 0) SDL_Delay(delay);
+
+
+	window->SetTitle(title);
 }
 
 // Call PreUpdate, Update and PostUpdate on all modules

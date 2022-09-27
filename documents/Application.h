@@ -12,6 +12,7 @@
 #include "ModuleRenderer3D.h"
 #include "ModuleCamera3D.h"
 #include "ModuleScene_01.h"
+#include "PerfTimer.h"
 
 using namespace std;
 
@@ -40,9 +41,26 @@ public:
 	update_status Update();
 	bool CleanUp();
 
+	// Timer thingies
+	PerfTimer ptimer;
+	PerfTimer frameDuration;
+
+	Timer startupTime;
+	Timer frameTime;
+	Timer lastSecFrameTime;
+
+	float frameCount = 0;
+	int framesPerSecond = 0;
+	int lastSecFrameCount = 0;
+	bool FPSCapTo30 = false;
+	float averageFps = 0.0f;
+	int maxFrameRate = 30;
+
 private:
 
 	void AddModule(Module* mod);
 	void PrepareUpdate();
 	void FinishUpdate();
+
+
 };

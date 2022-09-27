@@ -93,6 +93,9 @@
     <ClInclude Include="imgui\include\imgui_impl_opengl3_loader.h">
       <Filter>Sources\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="PerfTimer.h">
+      <Filter>Sources\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleAudio.cpp">
@@ -160,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="imgui\include\imgui_impl_sdl.cpp">
       <Filter>Sources\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="PerfTimer.cpp">
+      <Filter>Sources\Tools</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
