@@ -1,6 +1,7 @@
 #include "Globals.h"
 #include "Application.h"
 #include "ModuleInput.h"
+#include "imgui_impl_sdl.h"
 
 #define MAX_KEYS 300
 
@@ -88,6 +89,8 @@ update_status ModuleInput::PreUpdate(float dt)
 	
 	while(SDL_PollEvent(&e))
 	{
+		
+		ImGui_ImplSDL2_ProcessEvent(&e);
 		switch(e.type)
 		{
 			case SDL_MOUSEWHEEL:
