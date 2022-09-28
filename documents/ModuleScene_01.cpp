@@ -59,19 +59,25 @@ update_status ModuleScene_01::Update(float dt)
 
     ImGui::ShowDemoWindow();
 
-    ImGui::BeginMainMenuBar();
-    ImGui::Text("Main Menu");
-    
-    if (ImGui::Button(" Close", ImVec2(100, 20)))
+    if (ImGui::BeginMainMenuBar())
     {
-        return UPDATE_STOP;
+        if (ImGui::BeginMenu("File"))
+        {
+            
+            ImGui::EndMenu();
+        }
+        if (ImGui::BeginMenu("Edit"))
+        {
+            if (ImGui::MenuItem("Undo", "CTRL+Z")) {}
+            if (ImGui::MenuItem("Redo", "CTRL+Y", false, false)) {}  // Disabled item
+            ImGui::Separator();
+            if (ImGui::MenuItem("Cut", "CTRL+X")) {}
+            if (ImGui::MenuItem("Copy", "CTRL+C")) {}
+            if (ImGui::MenuItem("Paste", "CTRL+V")) {}
+            ImGui::EndMenu();
+        }
+        ImGui::EndMainMenuBar();
     }
-
-    ImGui::EndMainMenuBar();
-
-    ImGui::BeginMenuBar();
-    ImGui::Text("happy bar");
-    ImGui::EndMenuBar();
 
     ImGui::End();
 
