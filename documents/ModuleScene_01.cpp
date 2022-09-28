@@ -55,7 +55,7 @@ update_status ModuleScene_01::Update(float dt)
     ImGui::NewFrame();
   
 
-    ImGui::Begin("Custom window",0, ImGuiWindowFlags_MenuBar);
+    //ImGui::Begin("Custom window",0, ImGuiWindowFlags_MenuBar);
 
     ImGui::ShowDemoWindow();
 
@@ -63,7 +63,10 @@ update_status ModuleScene_01::Update(float dt)
     {
         if (ImGui::BeginMenu("File"))
         {
-            
+            if (ImGui::Button("Close")) 
+            {
+                return UPDATE_STOP;
+            }
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Edit"))
@@ -76,10 +79,36 @@ update_status ModuleScene_01::Update(float dt)
             if (ImGui::MenuItem("Paste", "CTRL+V")) {}
             ImGui::EndMenu();
         }
+        if (ImGui::BeginMenu("Help"))
+        {
+            if (ImGui::Button("About"))
+            {
+                activateAbout = !activateAbout;
+               
+            }
+
+           ImGui::EndMenu();
+        }
         ImGui::EndMainMenuBar();
     }
 
-    ImGui::End();
+    
+
+    if (activateAbout == true)
+    {
+        ImGui::Begin("About", 0, ImGuiWindowFlags_MenuBar);
+        {
+            ImGui::Text("BrumBrum");
+            ImGui::Text("Best Motor ever not of a car");
+            ImGui::Text("Abochan & Juan Fernando (https://github.com/AlCh440/EngineBrumBrum)");
+            ImGui::Text("We have the Mathegeolib, the glew, the JSON and the SDL");
+            ImGui::Text("License");
+        }
+
+        ImGui::End();
+    }
+
+    //ImGui::End();
 
 	return UPDATE_CONTINUE;
 }

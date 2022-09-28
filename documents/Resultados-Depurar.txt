@@ -1,0 +1,160 @@
+﻿'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Debug\Game\3D Physics - class5.exe' cargado. Símbolos cargados.
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\ntdll.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\kernel32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\KernelBase.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\user32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\win32u.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\SDL2.dll' cargado. El módulo se compiló sin símbolos.
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\gdi32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\advapi32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\msvcrt.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\gdi32full.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\msvcp_win.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\sechost.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\ucrtbase.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\rpcrt4.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\imm32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\imm32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\shell32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\imm32.dll' descargado
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\ole32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\combase.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\glu32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\opengl32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\SDL2_mixer.dll' cargado. El módulo se compiló sin símbolos.
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\oleaut32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\setupapi.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\cfgmgr32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\winmm.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\bcrypt.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\version.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\SHCore.dll' cargado. 
+
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Main.cpp(26) : Starting game '3D Physics Playground'...
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Main.cpp(47) : -------------- Application Creation --------------
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Main.cpp(54) : -------------- Application Init --------------
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleWindow.cpp(25) : Init SDL window & surface'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\uxtheme.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\mscms.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\userenv.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\coloradapterclient.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\icm32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\kernel.appcore.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\bcryptprimitives.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\clbcatq.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\MMDevAPI.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\devobj.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\avrt.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\hid.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\wintrust.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\crypt32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\msasn1.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\dinput8.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\InputHost.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\CoreMessaging.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\WinTypes.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\CoreUIComponents.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\propsys.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\ws2_32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\ntmarta.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\Windows.Gaming.Input.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\twinapi.appcore.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\XInput1_4.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\SensorsApi.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\SensorsUtilsV2.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\SensorsNativeApi.V2.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\powrprof.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\umpdc.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\PortableDeviceTypes.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\deviceaccess.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\msctf.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\AppXDeploymentClient.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_9413e5ce3f1b6ec6\nvoglv32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\wtsapi32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\cryptnet.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\drvstore.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\wldp.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\cryptbase.dll' cargado. 
+El subproceso 0x1500 terminó con código 0 (0x0).
+El subproceso 0x5d3c terminó con código 0 (0x0).
+El subproceso 0x5bc0 terminó con código 0 (0x0).
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\lskhook.dll' cargado. El módulo se compiló sin símbolos.
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\windows.storage.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\shlwapi.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\DXCore.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\nvspcap.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\profapi.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\dwmapi.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\winsta.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\TextInputFramework.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\oleacc.dll' cargado. 
+
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleInput.cpp(24) : Init SDL input event system
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleAudio.cpp(17) : Loading Audio Mixer'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libvorbisfile-3.dll' cargado. El módulo se compiló sin símbolos.
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libvorbisfile-3.dll' descargado
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libvorbisfile-3.dll' cargado. El módulo se compiló sin símbolos.
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libvorbis-0.dll' cargado. El módulo se compiló sin símbolos.
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libogg-0.dll' cargado. El módulo se compiló sin símbolos.
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\AudioSes.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\ResourcePolicyClient.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libmodplug-1.dll' cargado. El módulo se compiló sin símbolos.
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\winmmbase.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\wdmaud.drv' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\ksuser.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\msacm32.drv' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\msacm32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\midimap.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\Windows.UI.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\WindowManagementAPI.dll' cargado. 
+El subproceso 0x2454 terminó con código 0 (0x0).
+
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleRenderer3D.cpp(26) : Creating 3D Renderer context'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\d3d9.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_9413e5ce3f1b6ec6\nvldumd.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\imagehlp.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\cryptsp.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\rsaenh.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_9413e5ce3f1b6ec6\nvd3dum.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_9413e5ce3f1b6ec6\nvd3dum.dll' descargado
+'3D Physics - class5.exe' (Win32): 'C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_9413e5ce3f1b6ec6\nvd3dum.dll' cargado. 
+El subproceso 0x1ff0 terminó con código 0 (0x0).
+'3D Physics - class5.exe' (Win32): 'C:\Windows\SysWOW64\gpapi.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_9413e5ce3f1b6ec6\NvCamera\NvCameraAllowlisting32.dll' cargado. 
+'3D Physics - class5.exe' (Win32): 'C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_9413e5ce3f1b6ec6\NvCamera\NvCameraAllowlisting32.dll' descargado
+
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Application.cpp(58) : Application Start --------------
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleCamera3D.cpp(23) : Setting up the camera
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(20) : Loading Intro assets
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Main.cpp(63) : -------------- Application Update --------------
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Main.cpp(85) : -------------- Application CleanUp --------------
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleWindow.cpp(117) : Destroying SDL window and quitting all SDL systemsEl subproceso 0x13a4 terminó con código 0 (0x0).
+El subproceso 0x5df4 terminó con código 0 (0x0).
+El subproceso 0x230c terminó con código 0 (0x0).
+
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleCamera3D.cpp(32) : Cleaning camera
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleInput.cpp(129) : Quitting SDL input event subsystem
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleAudio.cpp(50) : Freeing sound FX, closing Mixer and Audio subsystem'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libmodplug-1.dll' descargado
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libvorbis-0.dll' descargado
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libogg-0.dll' descargado
+'3D Physics - class5.exe' (Win32): 'C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Game\libvorbisfile-3.dll' descargado
+
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(44) : Unloading Intro scene
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\ModuleRenderer3D.cpp(143) : Destroying 3D Renderer
+C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Main.cpp(103) : Exiting game '3D Physics Playground'...
+El subproceso 0x43bc terminó con código 0 (0x0).
+El subproceso 0x35ac terminó con código 0 (0x0).
+El subproceso 0x3b38 terminó con código 0 (0x0).
+El subproceso 0x524 terminó con código 0 (0x0).
+El subproceso 0x33e4 terminó con código 0 (0x0).
+El subproceso 0x512c terminó con código 0 (0x0).
+El subproceso 0x1c20 terminó con código 0 (0x0).
+El subproceso 0x2de0 terminó con código 0 (0x0).
+El subproceso 0x3d58 terminó con código 0 (0x0).
+El subproceso 0x57b4 terminó con código 0 (0x0).
+El subproceso 0x57dc terminó con código 0 (0x0).
+El subproceso 0x4a28 terminó con código 0 (0x0).
+El subproceso 0x3fe8 terminó con código 0 (0x0).
+El subproceso 0x29f4 terminó con código 0 (0x0).
+El subproceso 0x41d8 terminó con código 0 (0x0).
+El subproceso 0x2be0 terminó con código 0 (0x0).
+El subproceso 0x2acc terminó con código 0 (0x0).
+El subproceso 0x5574 terminó con código 0 (0x0).
+El programa '[8548] 3D Physics - class5.exe' terminó con código 0 (0x0).

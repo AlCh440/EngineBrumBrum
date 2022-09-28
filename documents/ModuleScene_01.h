@@ -24,4 +24,5 @@ public:
 	bool myToolActive = true;
 	bool myTryActive = true;
 	bool closeButton = false;
+	bool activateAbout = false;
 };
