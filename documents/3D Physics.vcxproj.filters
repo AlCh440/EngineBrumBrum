@@ -40,6 +40,42 @@
     <Filter Include="Sources\Tools\MathGeoLib\Algorithm\Random">
       <UniqueIdentifier>{5c33e211-82d4-432e-b0d1-b6a87749fb08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sources\Tools\Glew">
+      <UniqueIdentifier>{7cd6c3f5-ba06-4c91-a07b-4ded9ca95e19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Bin">
+      <UniqueIdentifier>{f6c44782-e343-4650-9e01-1051964c407e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Doc">
+      <UniqueIdentifier>{d8064930-f156-41a0-a7ff-22dbbe7807c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Lib">
+      <UniqueIdentifier>{1b2412df-3e1c-4ccd-b60e-b6b210844462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Include">
+      <UniqueIdentifier>{ba3616a5-f4b5-48c4-9103-acc17a93d9b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Bin\release">
+      <UniqueIdentifier>{e7f9d93f-f91d-48a5-971d-4d89f8b3d733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Bin\release\Win32">
+      <UniqueIdentifier>{2e05fab5-eeaa-4765-b7d0-4ac5e0acd0b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Bin\release\x64">
+      <UniqueIdentifier>{eca43bba-f557-442c-acbf-4370fe36dbbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Include\GL">
+      <UniqueIdentifier>{d39b6803-6f4c-4c0d-bcb2-21c129cdd310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Lib\release">
+      <UniqueIdentifier>{528b4acf-efcf-404f-b53c-63eec4ba6263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Lib\release\Win32">
+      <UniqueIdentifier>{6d1ec49e-e7b0-454d-8a5e-5284818ec6a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tools\Glew\Lib\release\x64">
+      <UniqueIdentifier>{8f32657b-7a97-448c-85e2-563a0a10d61c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Module.h">
@@ -339,6 +375,18 @@
     <ClInclude Include="MathGeoLib-master\src\MathGeoLibFwd.h">
       <Filter>Sources\Tools\MathGeoLib</Filter>
     </ClInclude>
+    <ClInclude Include="glew\include\GL\eglew.h">
+      <Filter>Sources\Tools\Glew\Include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\include\GL\glew.h">
+      <Filter>Sources\Tools\Glew\Include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\include\GL\glxew.h">
+      <Filter>Sources\Tools\Glew\Include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="glew\include\GL\wglew.h">
+      <Filter>Sources\Tools\Glew\Include\GL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleAudio.cpp">
@@ -559,5 +607,107 @@
     <None Include="MathGeoLib-master\src\Geometry\TriangleMesh_IntersectRay_SSE.inl">
       <Filter>Sources\Tools\MathGeoLib\Geometry</Filter>
     </None>
+    <None Include="glew\bin\Release\Win32\glewinfo.exe">
+      <Filter>Sources\Tools\Glew\Bin\release\Win32</Filter>
+    </None>
+    <None Include="glew\bin\Release\Win32\visualinfo.exe">
+      <Filter>Sources\Tools\Glew\Bin\release\Win32</Filter>
+    </None>
+    <None Include="glew\bin\Release\Win32\glew32.dll">
+      <Filter>Sources\Tools\Glew\Bin\release\Win32</Filter>
+    </None>
+    <None Include="glew\bin\Release\x64\glew32.dll">
+      <Filter>Sources\Tools\Glew\Bin\release\x64</Filter>
+    </None>
+    <None Include="glew\bin\Release\x64\glewinfo.exe">
+      <Filter>Sources\Tools\Glew\Bin\release\x64</Filter>
+    </None>
+    <None Include="glew\bin\Release\x64\visualinfo.exe">
+      <Filter>Sources\Tools\Glew\Bin\release\x64</Filter>
+    </None>
+    <None Include="glew\doc\advanced.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\basic.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\build.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\credits.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\glew.css">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\glew.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\glxew.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\index.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\install.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\log.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+    <None Include="glew\doc\wglew.html">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="glew\LICENSE.txt">
+      <Filter>Sources\Tools\Glew</Filter>
+    </Text>
+    <Text Include="glew\bin\Release\Win32\glewinfo.txt">
+      <Filter>Sources\Tools\Glew\Bin\release\Win32</Filter>
+    </Text>
+    <Text Include="glew\doc\glew.txt">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Text>
+    <Text Include="glew\doc\gpl.txt">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Text>
+    <Text Include="glew\doc\khronos.txt">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Text>
+    <Text Include="glew\doc\mesa.txt">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="glew\doc\github.png">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Image>
+    <Image Include="glew\doc\glew.png">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Image>
+    <Image Include="glew\doc\new.png">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Image>
+    <Image Include="glew\doc\ogl_sm.jpg">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Image>
+    <Image Include="glew\doc\travis.png">
+      <Filter>Sources\Tools\Glew\Doc</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="glew\lib\Release\Win32\glew32.lib">
+      <Filter>Sources\Tools\Glew\Lib\release\Win32</Filter>
+    </Library>
+    <Library Include="glew\lib\Release\Win32\glew32s.lib">
+      <Filter>Sources\Tools\Glew\Lib\release\Win32</Filter>
+    </Library>
+    <Library Include="glew\lib\Release\x64\glew32.lib">
+      <Filter>Sources\Tools\Glew\Lib\release\x64</Filter>
+    </Library>
+    <Library Include="glew\lib\Release\x64\glew32s.lib">
+      <Filter>Sources\Tools\Glew\Lib\release\x64</Filter>
+    </Library>
   </ItemGroup>
 </Project>

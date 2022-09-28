@@ -88,6 +88,10 @@
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="glew\include\GL\eglew.h" />
+    <ClInclude Include="glew\include\GL\glew.h" />
+    <ClInclude Include="glew\include\GL\glxew.h" />
+    <ClInclude Include="glew\include\GL\wglew.h" />
     <ClInclude Include="glmath.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="imgui\include\imconfig.h" />
@@ -254,6 +258,23 @@
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="glew\bin\Release\Win32\glew32.dll" />
+    <None Include="glew\bin\Release\Win32\glewinfo.exe" />
+    <None Include="glew\bin\Release\Win32\visualinfo.exe" />
+    <None Include="glew\bin\Release\x64\glew32.dll" />
+    <None Include="glew\bin\Release\x64\glewinfo.exe" />
+    <None Include="glew\bin\Release\x64\visualinfo.exe" />
+    <None Include="glew\doc\advanced.html" />
+    <None Include="glew\doc\basic.html" />
+    <None Include="glew\doc\build.html" />
+    <None Include="glew\doc\credits.html" />
+    <None Include="glew\doc\glew.css" />
+    <None Include="glew\doc\glew.html" />
+    <None Include="glew\doc\glxew.html" />
+    <None Include="glew\doc\index.html" />
+    <None Include="glew\doc\install.html" />
+    <None Include="glew\doc\log.html" />
+    <None Include="glew\doc\wglew.html" />
     <None Include="MathGeoLib-master\src\Geometry\KDTree.inl" />
     <None Include="MathGeoLib-master\src\Geometry\QuadTree.inl" />
     <None Include="MathGeoLib-master\src\Geometry\TriangleMesh_IntersectRay_AVX.inl" />
@@ -261,6 +282,27 @@
     <None Include="MathGeoLib-master\src\Geometry\TriangleMesh_IntersectRay_SSE.inl" />
     <None Include="MathGeoLib-master\src\Math\float2.inl" />
     <None Include="MathGeoLib-master\src\Math\Matrix.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="glew\bin\Release\Win32\glewinfo.txt" />
+    <Text Include="glew\doc\glew.txt" />
+    <Text Include="glew\doc\gpl.txt" />
+    <Text Include="glew\doc\khronos.txt" />
+    <Text Include="glew\doc\mesa.txt" />
+    <Text Include="glew\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="glew\doc\github.png" />
+    <Image Include="glew\doc\glew.png" />
+    <Image Include="glew\doc\new.png" />
+    <Image Include="glew\doc\ogl_sm.jpg" />
+    <Image Include="glew\doc\travis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="glew\lib\Release\Win32\glew32.lib" />
+    <Library Include="glew\lib\Release\Win32\glew32s.lib" />
+    <Library Include="glew\lib\Release\x64\glew32.lib" />
+    <Library Include="glew\lib\Release\x64\glew32s.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
