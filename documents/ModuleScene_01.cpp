@@ -81,11 +81,11 @@ update_status ModuleScene_01::Update(float dt)
         }
         if (ImGui::BeginMenu("Help"))
         {
-            if (ImGui::Button("About"))
+            if (ImGui::MenuItem("About"))
             {
                 activateAbout = !activateAbout;
                
-            }
+            }Ñ
 
            ImGui::EndMenu();
         }
