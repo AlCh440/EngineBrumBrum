@@ -1,5 +1,55 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Msbuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  ModuleAudio.cpp
-  ModuleWindow.cpp
+  Application.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(76,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(84,28): warning C4244: 'initializing': conversion from 'Uint32' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(103,24): warning C4473: 'sprintf_s' : not enough arguments passed for format string
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(103,24): message : placeholders and their parameters expect 3 variadic arguments, but 1 were provided
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(103,24): message : the missing variadic argument 2 is required by format string '%d'
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(108,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(114,47): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(128,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(136,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(144,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+  AABB.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Geometry\AABB.cpp(1207,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(410,1): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(403): message : while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\assume.h(126): message : see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream(708): message : see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sstream(786): message : see reference to class template instantiation 'std::basic_iostream<char,std::char_traits<char>>' being compiled
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\assume.h(113): message : see reference to class template instantiation 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' being compiled
+  Capsule.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Geometry\Capsule.cpp(457,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Geometry\Capsule.cpp(479,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(410,1): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(403): message : while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\assume.h(126): message : see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream(708): message : see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sstream(786): message : see reference to class template instantiation 'std::basic_iostream<char,std::char_traits<char>>' being compiled
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\assume.h(113): message : see reference to class template instantiation 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' being compiled
+  float2.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\float2.cpp(219,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(410,1): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(403): message : while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\assume.h(126): message : see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream(708): message : see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sstream(786): message : see reference to class template instantiation 'std::basic_iostream<char,std::char_traits<char>>' being compiled
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\assume.h(113): message : see reference to class template instantiation 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' being compiled
+  float3.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\float3.cpp(216,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(410,1): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(403): message : while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\assume.h(126): message : see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream(708): message : see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\sstream(786): message : see reference to class template instantiation 'std::basic_iostream<char,std::char_traits<char>>' being compiled
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\assume.h(113): message : see reference to class template instantiation 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' being compiled
+  ModuleRenderer3D.cpp
+  ModuleScene_01.cpp
+  Timer.cpp
   Generating Code...
+  grisu3.c
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\grisu3.c(324,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\grisu3.c(365,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\grisu3.c(390,10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\MathGeoLib-master\src\Math\grisu3.c(407,10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   3D Physics.vcxproj -> C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Debug\Game\3D Physics - class5.exe

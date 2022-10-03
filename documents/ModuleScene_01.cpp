@@ -7,6 +7,12 @@
 #include "imgui_impl_sdl.h"
 
 
+#include "nlohmann/json.hpp"
+
+
+// for convenience
+using json = nlohmann::json;
+
 ModuleScene_01::ModuleScene_01(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
 }
