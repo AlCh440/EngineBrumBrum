@@ -7,11 +7,7 @@
 #include "imgui_impl_sdl.h"
 
 
-#include "nlohmann/json.hpp"
 
-
-// for convenience
-using json = nlohmann::json;
 
 ModuleScene_01::ModuleScene_01(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
@@ -60,7 +56,7 @@ update_status ModuleScene_01::Update(float dt)
     ImGui_ImplSDL2_NewFrame(App->window->window);
     ImGui::NewFrame();
   
-
+   
     //ImGui::Begin("Custom window",0, ImGuiWindowFlags_MenuBar);
 
     ImGui::ShowDemoWindow();

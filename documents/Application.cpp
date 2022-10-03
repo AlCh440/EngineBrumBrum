@@ -1,6 +1,13 @@
 #include "Application.h"
+#include <fstream>
+
+#include "rapidjson/rapidjson.h"
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
+#include "rapidjson/document.h"
 
 using namespace std;
+using namespace rapidjson;
 
 Application::Application()
 {
@@ -80,6 +87,11 @@ void Application::PrepareUpdate()
 // ---------------------------------------------
 void Application::FinishUpdate()
 {
+	if (SaveGameRequest)
+	{
+		SaveGame();
+		SaveGameRequest == false;
+	}
 
 	float secondsSinceStartup = startupTime.Read();
 
@@ -117,6 +129,21 @@ void Application::FinishUpdate()
 	window->SetTitle(title);
 }
 
+void Application::SaveGame()
+{
+	
+	const char* json = "{a}";
+	
+	Document d;
+	//d.Parse(json);
+
+}
+
+void Application::LoadGame()
+{
+
+}
+
 // Call PreUpdate, Update and PostUpdate on all modules
 update_status Application::Update()
 {
@@ -130,6 +157,9 @@ update_status Application::Update()
 		ret = item._Ptr->_Myval->PreUpdate(dt);
 		item++;
 	}
+
+	if (input->GetKey(SDL_SCANCODE_S) == KEY_DOWN)
+		SaveGameRequest = true;
 
 	item = list_modules.begin();
 

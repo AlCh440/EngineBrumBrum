@@ -62,5 +62,9 @@ private:
 	void PrepareUpdate();
 	void FinishUpdate();
 
+	void SaveGame();
+	void LoadGame();
 
+	bool SaveGameRequest = false;
+	bool LoadGameRequest = false;
 };
