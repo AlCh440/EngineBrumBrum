@@ -127,6 +127,19 @@ bool ModuleWindow::CleanUp()
 	return true;
 }
 
+void ModuleWindow::SetFullscreen(bool fullscreen)
+{
+	SDL_SetWindowFullscreen(window, fullscreen);
+}
+
+void ModuleWindow::SetFullscreenNo(bool fullscreenno)
+{
+	SDL_SetWindowFullscreen(window, fullscreenno);
+}
+void ModuleWindow::Vsync(bool vsync)
+{
+	
+}
 void ModuleWindow::SetTitle(const char* title)
 {
 	SDL_SetWindowTitle(window, title);

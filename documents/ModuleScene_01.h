@@ -25,4 +25,8 @@ public:
 	bool myTryActive = true;
 	bool closeButton = false;
 	bool activateAbout = false;
+	bool fullscreen = false;
+	bool fullscreenno = false;
+	bool vsync = false;
+
 };

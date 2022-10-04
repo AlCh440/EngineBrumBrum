@@ -1,6 +1,7 @@
 #include "Globals.h"
 #include "Application.h"
 #include "ModuleScene_01.h"
+#include "ModuleWindow.h"
 
 #include "imgui.h"
 #include "imgui_impl_opengl3.h"
@@ -91,6 +92,60 @@ update_status ModuleScene_01::Update(float dt)
 
            ImGui::EndMenu();
         }
+
+        if (ImGui::BeginMenu("Configuration"))
+        {
+            if (ImGui::BeginMenu("Window"))
+            {
+                ImGui::Checkbox("Full Screen", &fullscreen);
+                {
+
+
+
+
+                    if (fullscreen == true)
+                    {
+                        fullscreenno = true;
+                        App->window->SetFullscreen(fullscreen);
+
+                    }
+                    if (fullscreen == false)
+                    {
+                        fullscreenno = false;
+                        App->window->SetFullscreenNo(fullscreenno);
+                    }
+                }
+
+                ImGui::Checkbox("Vsync", &vsync);
+                {
+
+                }
+
+              //ImGui::S
+                    
+                
+                
+                ImGui::EndMenu();
+            }
+
+            if (ImGui::Button("Renderer"))
+            {
+
+
+            }
+            if (ImGui::Button("Input"))
+            {
+
+
+            }
+            if (ImGui::Button("Audio"))
+            {
+
+
+            }
+
+            ImGui::EndMenu();
+        }
         ImGui::EndMainMenuBar();
     }
 
@@ -109,6 +164,8 @@ update_status ModuleScene_01::Update(float dt)
 
         ImGui::End();
     }
+
+    
 
     //ImGui::End();
 
