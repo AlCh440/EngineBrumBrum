@@ -8,7 +8,10 @@
 
 struct PhysBody3D;
 struct PhysMotor3D;
-
+struct float3
+{
+	float x, y, z;
+};
 class ModuleScene_01 : public Module
 {
 public:
@@ -20,6 +23,12 @@ public:
 	bool CleanUp();
 
 	update_status menuDisplay();
+	void testOpenGL();
+
+	void DrawCube01();
+	void DrawCube02();
+
+
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
 
 	bool myToolActive = true;
