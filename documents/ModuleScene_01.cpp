@@ -91,9 +91,23 @@ update_status ModuleScene_01::menuDisplay()
             if (ImGui::MenuItem("Undo", "CTRL+Z")) {}
             if (ImGui::MenuItem("Redo", "CTRL+Y", false, false)) {}  // Disabled item
             ImGui::Separator();
+            if (ImGui::MenuItem("Select All", "CTRL+A")) {}
+            if (ImGui::MenuItem("Deselect All", "Shift+D")) {}
+            if (ImGui::MenuItem("Select Children", "CTRL+C")) {}
+            if (ImGui::MenuItem("Invert Selection", "CTRL+I")) {}
+            ImGui::Separator();
             if (ImGui::MenuItem("Cut", "CTRL+X")) {}
             if (ImGui::MenuItem("Copy", "CTRL+C")) {}
             if (ImGui::MenuItem("Paste", "CTRL+V")) {}
+            ImGui::Separator();
+            if (ImGui::MenuItem("Duplicate", "CTRL+D")) {}
+            if (ImGui::MenuItem("Rename")) {}
+            if (ImGui::MenuItem("Delete")) {}
+            ImGui::Separator();
+            if (ImGui::MenuItem("Play", "CTRL+P")) {}
+            if (ImGui::MenuItem("Pause", "CTRL+Shift+P")) {}
+            if (ImGui::MenuItem("Play", "CTRL+P")) {}
+
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Help"))
@@ -147,7 +161,7 @@ update_status ModuleScene_01::menuDisplay()
                 }
 
                 static int i1 = 50, i2 = 42;
-                ImGui::DragInt("drag int 0..100", &i2, 1, 0, 100, "%d%%", ImGuiSliderFlags_AlwaysClamp);
+                ImGui::DragInt("Brightness", &i2, 1, 0, 100, "%d%%", ImGuiSliderFlags_AlwaysClamp);
 
 
 
@@ -182,11 +196,21 @@ update_status ModuleScene_01::menuDisplay()
     {
         ImGui::Begin("About", 0, ImGuiWindowFlags_MenuBar);
         {
-            ImGui::Text("BrumBrum");
-            ImGui::Text("Best Motor ever not of a car");
-            ImGui::Text("Abochan & Juan Fernando (https://github.com/AlCh440/EngineBrumBrum)");
-            ImGui::Text("We have the Mathegeolib, the glew, the JSON and the SDL");
-            ImGui::Text("License");
+           
+
+            ImGui::Text("ABOUT THIS DEMO:");
+            ImGui::BulletText("BrumBrum Engine");
+            ImGui::BulletText("Best Motor ever not of a car");
+           
+            ImGui::Text("PROGRAMMER GUIDE:");
+            
+            ImGui::BulletText("Abochan & Juan Fernando (https://github.com/AlCh440/EngineBrumBrum)");
+            ImGui::BulletText("We have the Mathegeolib, the glew, the JSON and the SDL");
+            ImGui::BulletText("License");
+            ImGui::Separator();
+
+            ImGui::Text("USER GUIDE:");
+            ImGui::ShowUserGuide();
         }
 
         ImGui::End();
