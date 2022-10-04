@@ -52,7 +52,8 @@ bool ModuleScene_01::CleanUp()
 // Update
 update_status ModuleScene_01::Update(float dt)
 {
-   
+    update_status ret = UPDATE_CONTINUE;
+
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplSDL2_NewFrame(App->window->window);
     ImGui::NewFrame();
@@ -62,11 +63,24 @@ update_status ModuleScene_01::Update(float dt)
 
     ImGui::ShowDemoWindow();
 
+     ret = menuDisplay();
+
+    
+
+    
+
+    //ImGui::End();
+
+     return ret;
+}
+
+update_status ModuleScene_01::menuDisplay()
+{
     if (ImGui::BeginMainMenuBar())
     {
         if (ImGui::BeginMenu("File"))
         {
-            if (ImGui::Button("Close")) 
+            if (ImGui::Button("Close"))
             {
                 return UPDATE_STOP;
             }
@@ -87,10 +101,10 @@ update_status ModuleScene_01::Update(float dt)
             if (ImGui::Button("About"))
             {
                 activateAbout = !activateAbout;
-               
+
             }
 
-           ImGui::EndMenu();
+            ImGui::EndMenu();
         }
 
         if (ImGui::BeginMenu("Configuration"))
@@ -123,22 +137,22 @@ update_status ModuleScene_01::Update(float dt)
 
                 if (ImGui::BeginMenu("Style"))
                 {
-                  
+
                     ImGui::ShowStyleEditor();
-                   
+
 
                     ImGui::EndMenu();
 
 
                 }
-                
+
                 static int i1 = 50, i2 = 42;
                 ImGui::DragInt("drag int 0..100", &i2, 1, 0, 100, "%d%%", ImGuiSliderFlags_AlwaysClamp);
 
-                
-                    
-                
-                
+
+
+
+
                 ImGui::EndMenu();
             }
 
@@ -163,7 +177,6 @@ update_status ModuleScene_01::Update(float dt)
         ImGui::EndMainMenuBar();
     }
 
-    
 
     if (activateAbout == true)
     {
@@ -179,11 +192,8 @@ update_status ModuleScene_01::Update(float dt)
         ImGui::End();
     }
 
-    
 
-    //ImGui::End();
-
-	return UPDATE_CONTINUE;
+    return UPDATE_CONTINUE;
 }
 
 void ModuleScene_01::OnCollision(PhysBody3D* body1, PhysBody3D* body2)
