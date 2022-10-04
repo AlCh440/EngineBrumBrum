@@ -121,7 +121,21 @@ update_status ModuleScene_01::Update(float dt)
 
                 }
 
-              //ImGui::S
+                if (ImGui::BeginMenu("Style"))
+                {
+                  
+                    ImGui::ShowStyleEditor();
+                   
+
+                    ImGui::EndMenu();
+
+
+                }
+                
+                static int i1 = 50, i2 = 42;
+                ImGui::DragInt("drag int 0..100", &i2, 1, 0, 100, "%d%%", ImGuiSliderFlags_AlwaysClamp);
+
+                
                     
                 
                 
