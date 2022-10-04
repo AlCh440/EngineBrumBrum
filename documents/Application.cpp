@@ -1,10 +1,14 @@
 #include "Application.h"
 #include <fstream>
 
-#include "rapidjson/rapidjson.h"
+#include "rapidjson/document.h"
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
-#include "rapidjson/document.h"
+#include <iostream>
+
+using namespace rapidjson;
+
+
 
 using namespace std;
 using namespace rapidjson;
@@ -132,11 +136,11 @@ void Application::FinishUpdate()
 void Application::SaveGame()
 {
 	
-	const char* json = "{a}";
+	char* chara = "{rapidjson}";
 	
-	Document d;
-	//d.Parse(json);
+	Document doc;
 
+	//doc.Parse(chara);
 }
 
 void Application::LoadGame()

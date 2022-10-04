@@ -12,6 +12,8 @@
 #include <gl/GL.h>
 #include <gl/GLU.h>
 
+#define GLVertexDD(idx) {float3& v = vertices[*idx - 1]; glVertex3f(v.x, v.y, v.z);}
+
 
 ModuleScene_01::ModuleScene_01(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
@@ -236,11 +238,22 @@ void ModuleScene_01::testOpenGL()
     }
     glEnd();
 
-
+    //DrawCube02();
 	
-   
- 
-
+                            // ID of VBO
+  // float3 vertices[] = {
+  // {-1., -1., -1.}, {1., -1., -1.},
+  // {-1., 1., -1.}, {1., 1., -1.},
+  // {-1., -1., 1.}, {1., -1., 1.},
+  // {-1., 1., 1.}, {1., 1., 1.}
+  //
+  // };
+  //float vertices[] = { -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1 };
+  //
+  //uint my_id = 0;
+  //glGenBuffers(1, (GLuint*)&(my_id));
+  //glBindBuffer(GL_ARRAY_BUFFER, my_id);
+  //glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8 * 3, vertices, GL_STATIC_DRAW);
 }
 
 void ModuleScene_01::DrawCube01()
@@ -382,6 +395,92 @@ void ModuleScene_01::DrawCube02()
     glEnd();
 }
 
+void ModuleScene_01::DrawCube03()
+{
+    float3 vertices[] = {
+    {-1., -1., -1.}, {1., -1., -1.},
+    {-1., 1., -1.}, {1., 1., -1.},
+    {-1., -1., 1.}, {1., -1., 1.},
+    {-1., 1., 1.}, {1., 1., 1.}
+
+    };
+    int indices[] = {
+        5,6,8,	5,8,7,
+        4,2,1,	1,3,4,
+        4,3,8,	3,7,8,
+        2,6,1,	1,6,5,
+        1,7,3,	1,5,7,
+        2,4,8,	2,8,6
+    };
+
+
+    glBegin(GL_TRIANGLES);
+    int* idx = indices;
+
+    // Front Face
+    glColor3f(1., 1., 0.);
+    GLVertexDD(idx); idx++; // 5
+    GLVertexDD(idx); idx++; // 6
+    GLVertexDD(idx); idx++; // 8
+
+    GLVertexDD(idx); idx++; // 5
+    GLVertexDD(idx); idx++; // 8
+    GLVertexDD(idx); idx++; // 7
+
+    // Back Fave
+    glColor3f(1., 0., 1.);
+    GLVertexDD(idx); idx++; // 4
+    GLVertexDD(idx); idx++; // 2
+    GLVertexDD(idx); idx++; // 1
+
+    GLVertexDD(idx); idx++; // 1
+    GLVertexDD(idx); idx++; // 3
+    GLVertexDD(idx); idx++; // 4
+
+    // Top Face
+    glColor3f(0., 1., 1.);
+    GLVertexDD(idx); idx++; // 4
+    GLVertexDD(idx); idx++; // 3
+    GLVertexDD(idx); idx++; // 8
+
+    GLVertexDD(idx); idx++; // 3
+    GLVertexDD(idx); idx++; // 7
+    GLVertexDD(idx); idx++; // 8
+
+    // Bottom Face
+    glColor3f(1., 0., 0.);
+    GLVertexDD(idx); idx++; // 2
+    GLVertexDD(idx); idx++; // 6
+    GLVertexDD(idx); idx++; // 1
+
+    GLVertexDD(idx); idx++; // 1
+    GLVertexDD(idx); idx++; // 6
+    GLVertexDD(idx); idx++; // 5
+
+    // SideL / TriT
+    glColor3f(0., 1., 0.);
+    GLVertexDD(idx); idx++; // 1
+    GLVertexDD(idx); idx++; // 7
+    GLVertexDD(idx); idx++; // 3
+
+    GLVertexDD(idx); idx++; // 1
+    GLVertexDD(idx); idx++; // 5
+    GLVertexDD(idx); idx++; // 7
+
+    // SideR / TriT
+    glColor3f(0., 0., 1.);
+    GLVertexDD(idx); idx++; // 2
+    GLVertexDD(idx); idx++; // 4
+    GLVertexDD(idx); idx++; // 8
+
+    GLVertexDD(idx); idx++; // 2
+    GLVertexDD(idx); idx++; // 8
+    GLVertexDD(idx); idx++; // 6
+
+    glEnd();
+
+}
+
 void ModuleScene_01::OnCollision(PhysBody3D* body1, PhysBody3D* body2)
 {
 }
@@ -393,70 +492,4 @@ void ModuleScene_01::OnCollision(PhysBody3D* body1, PhysBody3D* body2)
 
 
 
-//void DDCube_BadIndices()
-//{
-//	glBegin(GL_TRIANGLES);
-//	int* idx = indices;
-//
-//	// Front Face
-//	glColor3f(1., 1., 0.);
-//	GLVertexDD(idx); idx++; // 5
-//	GLVertexDD(idx); idx++; // 6
-//	GLVertexDD(idx); idx++; // 8
-//
-//	GLVertexDD(idx); idx++; // 5
-//	GLVertexDD(idx); idx++; // 8
-//	GLVertexDD(idx); idx++; // 7
-//
-//	// Back Fave
-//	glColor3f(1., 0., 1.);
-//	GLVertexDD(idx); idx++; // 4
-//	GLVertexDD(idx); idx++; // 2
-//	GLVertexDD(idx); idx++; // 1
-//
-//	GLVertexDD(idx); idx++; // 1
-//	GLVertexDD(idx); idx++; // 3
-//	GLVertexDD(idx); idx++; // 4
-//
-//	// Top Face
-//	glColor3f(0., 1., 1.);
-//	GLVertexDD(idx); idx++; // 4
-//	GLVertexDD(idx); idx++; // 3
-//	GLVertexDD(idx); idx++; // 8
-//
-//	GLVertexDD(idx); idx++; // 3
-//	GLVertexDD(idx); idx++; // 7
-//	GLVertexDD(idx); idx++; // 8
-//
-//	// Bottom Face
-//	glColor3f(1., 0., 0.);
-//	GLVertexDD(idx); idx++; // 2
-//	GLVertexDD(idx); idx++; // 6
-//	GLVertexDD(idx); idx++; // 1
-//
-//	GLVertexDD(idx); idx++; // 1
-//	GLVertexDD(idx); idx++; // 6
-//	GLVertexDD(idx); idx++; // 5
-//
-//	// SideL / TriT
-//	glColor3f(0., 1., 0.);
-//	GLVertexDD(idx); idx++; // 1
-//	GLVertexDD(idx); idx++; // 7
-//	GLVertexDD(idx); idx++; // 3
-//
-//	GLVertexDD(idx); idx++; // 1
-//	GLVertexDD(idx); idx++; // 5
-//	GLVertexDD(idx); idx++; // 7
-//
-//	// SideR / TriT
-//	glColor3f(0., 0., 1.);
-//	GLVertexDD(idx); idx++; // 2
-//	GLVertexDD(idx); idx++; // 4
-//	GLVertexDD(idx); idx++; // 8
-//
-//	GLVertexDD(idx); idx++; // 2
-//	GLVertexDD(idx); idx++; // 8
-//	GLVertexDD(idx); idx++; // 6
-//
-//	glEnd();
-//}
+	
