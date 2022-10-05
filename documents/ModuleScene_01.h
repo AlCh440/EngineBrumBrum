@@ -25,6 +25,8 @@ public:
 	update_status menuDisplay();
 	void testOpenGL();
 
+	update_status UpdateGeometry();
+	update_status UpdateEditor();
 	void DrawCube01();
 	void DrawCube02();
 	void DrawCube03();

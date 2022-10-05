@@ -59,18 +59,13 @@ update_status ModuleScene_01::Update(float dt)
 {
     update_status ret = UPDATE_CONTINUE;
 
-    ImGui_ImplOpenGL3_NewFrame();
-    ImGui_ImplSDL2_NewFrame(App->window->window);
-    ImGui::NewFrame();
-  
-   
+    ret = UpdateGeometry();
+
+    ret = UpdateEditor();
+    
     //ImGui::Begin("Custom window",0, ImGuiWindowFlags_MenuBar);
 
-    ImGui::ShowDemoWindow();
-
-     ret = menuDisplay();
-    
-     testOpenGL();
+     
      return ret;
 }
 
@@ -343,6 +338,29 @@ void ModuleScene_01::testOpenGL()
 
   //glDrawArrays(GL_TRIANGLES, 0, 8);
   glDisableClientState(GL_VERTEX_ARRAY);
+}
+
+update_status ModuleScene_01::UpdateGeometry()
+{
+    update_status ret = UPDATE_CONTINUE;
+
+    testOpenGL();
+
+    return ret;
+}
+
+update_status ModuleScene_01::UpdateEditor()
+{
+    update_status ret = UPDATE_CONTINUE;
+
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplSDL2_NewFrame(App->window->window);
+    ImGui::NewFrame();
+
+    ImGui::ShowDemoWindow();
+
+    ret = menuDisplay();
+    return ret;
 }
 
 void ModuleScene_01::DrawCube01()
