@@ -40,5 +40,5 @@ public:
 	bool fullscreen = false;
 	bool fullscreenno = false;
 	bool vsync = false;
-
+	bool boolWireframe = false;
 };

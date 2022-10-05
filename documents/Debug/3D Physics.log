@@ -1,4 +1,4 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
   ModuleScene_01.cpp
-C:\Users\albertcf5\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(183,22): warning C4101: 'title': variable local sin referencia
+C:\Users\albertcf5\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(185,22): warning C4101: 'title': variable local sin referencia
   3D Physics.vcxproj -> C:\Users\albertcf5\Documents\GitHub\EngineBrumBrum\documents\Debug\Game\3D Physics - class5.exe

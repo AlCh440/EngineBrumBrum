@@ -151,6 +151,8 @@ update_status ModuleScene_01::menuDisplay()
 
                 }
 
+                ImGui::Checkbox("Wireframe", &boolWireframe);
+
                 ImGui::Checkbox("Vsync", &vsync);
                 {
 
@@ -343,9 +345,15 @@ void ModuleScene_01::testOpenGL()
 update_status ModuleScene_01::UpdateGeometry()
 {
     update_status ret = UPDATE_CONTINUE;
+    if (boolWireframe)
+    {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    }
+    
 
     testOpenGL();
 
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     return ret;
 }
 
