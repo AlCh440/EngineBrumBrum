@@ -11,9 +11,75 @@
 #include "SDL\include\SDL_opengl.h"
 #include <gl/GL.h>
 #include <gl/GLU.h>
+#include <vector>
 
 #define GLVertexDD(idx) {float3& v = vertices[*idx - 1]; glVertex3f(v.x, v.y, v.z);}
 
+class SolidSphere
+{
+protected:
+    std::vector<GLfloat> vertices;
+    std::vector<GLfloat> normals;
+    std::vector<GLfloat> texcoords;
+    std::vector<GLushort> indices;
+
+public:
+    SolidSphere(float radius, unsigned int rings, unsigned int sectors)
+    {
+        float const R = 1. / (float)(rings - 1);
+        float const S = 1. / (float)(sectors - 1);
+        int r, s;
+
+        vertices.resize(rings * sectors * 3);
+        normals.resize(rings * sectors * 3);
+        texcoords.resize(rings * sectors * 2);
+        std::vector<GLfloat>::iterator v = vertices.begin();
+        std::vector<GLfloat>::iterator n = normals.begin();
+        std::vector<GLfloat>::iterator t = texcoords.begin();
+        for (r = 0; r < rings; r++) for (s = 0; s < sectors; s++) {
+            float const y = sin(-M_PI_2 + M_PI * r * R);
+            float const x = cos(2 * M_PI * s * S) * sin(M_PI * r * R);
+            float const z = sin(2 * M_PI * s * S) * sin(M_PI * r * R);
+
+            *t++ = s * S;
+            *t++ = r * R;
+
+            *v++ = x * radius;
+            *v++ = y * radius;
+            *v++ = z * radius;
+
+            *n++ = x;
+            *n++ = y;
+            *n++ = z;
+        }
+
+        indices.resize(rings * sectors * 4);
+        std::vector<GLushort>::iterator i = indices.begin();
+        for (r = 0; r < rings; r++) for (s = 0; s < sectors; s++) {
+            *i++ = r * sectors + s;
+            *i++ = r * sectors + (s + 1);
+            *i++ = (r + 1) * sectors + (s + 1);
+            *i++ = (r + 1) * sectors + s;
+        }
+    }
+
+    void draw(GLfloat x, GLfloat y, GLfloat z)
+    {
+        glMatrixMode(GL_MODELVIEW);
+        glPushMatrix();
+        glTranslatef(x, y, z);
+
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glEnableClientState(GL_NORMAL_ARRAY);
+        glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+
+        glVertexPointer(3, GL_FLOAT, 0, &vertices[0]);
+        glNormalPointer(GL_FLOAT, 0, &normals[0]);
+        glTexCoordPointer(2, GL_FLOAT, 0, &texcoords[0]);
+        glDrawElements(GL_QUADS, indices.size(), GL_UNSIGNED_SHORT, &indices[0]);
+        glPopMatrix();
+    }
+};
 
 ModuleScene_01::ModuleScene_01(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
@@ -299,47 +365,8 @@ void ModuleScene_01::testOpenGL()
     }
     glEnd();
 
-    //DrawCube02();
-
-
-   float3 vertices[] = {
-   {-1., -1., -1.}, {1., -1., -1.},
-   {-1., 1., -1.}, {1., 1., -1.},
-   {-1., -1., 1.}, {1., -1., 1.},
-   {-1., 1., 1.}, {1., 1., 1.}
-  
-   };
- 
-   int indices[] = {
-      4,5,6,	5,7,6,
-      5,1,7,	1,3,7,
-      0,4,2,	4,6,2,
-      6,7,2,	7,3,2,
-      1,0,3,	0,2,3,
-      0,1,4,    1,5,4
-   };
-  
-  uint my_id = 0;
-  glGenBuffers(1, (GLuint*)&(my_id));
-  glBindBuffer(GL_ARRAY_BUFFER, my_id);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8 * 3, vertices, GL_STATIC_DRAW);
-
-  int my_indices = 0;
-  glGenBuffers(1, (GLuint*)&(my_indices));
-  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
-  glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint) * 36, indices, GL_STATIC_DRAW);
-
-  glRotatef(0.1f, 1.0f, 1.0f, 0.0f);
-
-  glEnableClientState(GL_VERTEX_ARRAY);
-  glBindBuffer(GL_ARRAY_BUFFER, my_id);
-  glVertexPointer(3, GL_FLOAT, 0, NULL);
-  
-  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
-  glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, NULL);
-
-  //glDrawArrays(GL_TRIANGLES, 0, 8);
-  glDisableClientState(GL_VERTEX_ARRAY);
+    SolidSphere* sphere01 = new SolidSphere(2, 20, 20);
+    sphere01->draw(0, 3, 0);
 }
 
 update_status ModuleScene_01::UpdateGeometry()
@@ -378,30 +405,7 @@ void ModuleScene_01::DrawCube01()
 
     glColor3f(1., 1., 0.);
 
-    /// <summary>
-    ///  8 Vertex
-    /// x = -1 or 1, same for y, z
-    /// Permutations
-    /// 1 1 1 = 8
-    /// 1 1 -1 = 4
-    /// 1 -1 1 = 6
-    /// -1 1 1 = 7
-    /// -1 -1 1 = 5
-    /// -1 1 -1 = 3
-    /// -1 -1 -1 = 1
-    /// 1 -1 -1 = 2
-    /// </summary>
-
-    // Remember Counterclockwise Order (Right Hand Rule)
-    // glVertex3f(-1., -1., -1.);	// 1
-    // glVertex3f(1., -1., -1.);	// 2
-    // glVertex3f(-1., 1., -1.);	// 3
-    // glVertex3f(1., 1., -1.);		// 4
-    // glVertex3f(-1., -1., 1.);	// 5
-    // glVertex3f(1., -1., 1.);		// 6
-    // glVertex3f(-1., 1., 1.);		// 7
-    // glVertex3f(1., 1., 1.);		// 8
-
+    
     // Z = 1 / TriB
     glColor3f(1., 1., 0.);
     glVertex3f(-1., -1., 1.);	// 5
@@ -594,6 +598,87 @@ void ModuleScene_01::DrawCube03()
 
     glEnd();
 
+}
+
+void ModuleScene_01::DrawCubeArray()
+{
+    float3 vertices[] = {
+        {-1, -1, 1}, { 1, -1, 1}, {-1, 1, 1},
+        {1, -1, 1}, {1, 1, 1}, {-1, 1, 1},
+        {1, -1, 1}, {1, -1, -1}, {1, 1, 1},
+        {1, -1, -1}, {1, 1, -1}, {1, 1, 1},
+        {-1, 1, -1}, {-1, 1, 1}, {1, 1, 1},
+        {-1, 1, -1}, {1, 1, 1}, {1, 1, -1},
+        {-1, -1, 1}, {-1, 1, 1}, {-1, 1, -1},
+        {-1, -1, 1}, {-1, 1, -1}, {-1, -1, -1},
+        {-1, -1, -1}, {1, -1, 1}, {-1, -1, 1},
+        {-1, -1, -1}, {1, -1, -1}, {1, -1, 1},
+        {-1, -1, -1}, {1, 1, -1}, {1, -1, -1},
+        {-1, -1, -1}, {-1, 1, -1}, {1, 1, -1}
+    };
+
+
+    uint my_id = 0;
+    glGenBuffers(1, (GLuint*)&(my_id));
+    glBindBuffer(GL_ARRAY_BUFFER, my_id);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 36 * 3, vertices, GL_STATIC_DRAW);
+
+
+
+    glRotatef(0.1f, 1.0f, 1.0f, 0.0f);
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glBindBuffer(GL_ARRAY_BUFFER, my_id);
+    glVertexPointer(3, GL_FLOAT, 0, NULL);
+
+
+
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+    glDisableClientState(GL_VERTEX_ARRAY);
+
+
+}
+
+void ModuleScene_01::DrawCubeIndices()
+{
+    float3 vertices[] = {
+   {-1., -1., -1.}, {1., -1., -1.},
+   {-1., 1., -1.}, {1., 1., -1.},
+   {-1., -1., 1.}, {1., -1., 1.},
+   {-1., 1., 1.}, {1., 1., 1.}
+
+    };
+
+    int indices[] = {
+       4,5,6,	5,7,6,
+       5,1,7,	1,3,7,
+       0,4,2,	4,6,2,
+       6,7,2,	7,3,2,
+       1,0,3,	0,2,3,
+       0,1,4,    1,5,4
+    };
+
+    uint my_id = 0;
+    glGenBuffers(1, (GLuint*)&(my_id));
+    glBindBuffer(GL_ARRAY_BUFFER, my_id);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8 * 3, vertices, GL_STATIC_DRAW);
+
+    int my_indices = 0;
+    glGenBuffers(1, (GLuint*)&(my_indices));
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint) * 36, indices, GL_STATIC_DRAW);
+
+    glRotatef(0.1f, 1.0f, 1.0f, 0.0f);
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glBindBuffer(GL_ARRAY_BUFFER, my_id);
+    glVertexPointer(3, GL_FLOAT, 0, NULL);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
+    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, NULL);
+
+    //glDrawArrays(GL_TRIANGLES, 0, 8);
+    glDisableClientState(GL_VERTEX_ARRAY);
 }
 
 void ModuleScene_01::OnCollision(PhysBody3D* body1, PhysBody3D* body2)

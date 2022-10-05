@@ -15,7 +15,7 @@ public:
 	void Stop();
 
 	Uint32 Read();
-
+	float ReadSec();
 private:
 
 	bool	running;

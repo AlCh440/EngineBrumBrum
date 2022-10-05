@@ -4,15 +4,12 @@
 	ALBERT
 - CONFIGURATION WINDOW FINALLE
 - LOG OUTPUT TO CONSOLE!!! NO IDEA
-- INFO ABOUT needs to complete
+- "ABOUT" needs to complete
 - Print opengl driver info + all GLEW output in the console
 - Make sure OpenGL is correctly initialized and uninitialized
 - Add buttons to directly enable/disable :
-- Add options to draw in wireframe mode (research!)
-- Keep the cube in direct mode
-- You should also support sphere
+- FIX SPHERE!
 - Generate your own small library of shapes
 - UPDATE GITIGNORE!
 	ALBERT
--FIX FPS control
 - ALL 05 assignment

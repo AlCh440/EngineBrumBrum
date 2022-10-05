@@ -30,6 +30,8 @@ public:
 	void DrawCube01();
 	void DrawCube02();
 	void DrawCube03();
+	void DrawCubeArray();
+	void DrawCubeIndices();
 
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
 
@@ -41,4 +43,7 @@ public:
 	bool fullscreenno = false;
 	bool vsync = false;
 	bool boolWireframe = false;
+
 };
+
+

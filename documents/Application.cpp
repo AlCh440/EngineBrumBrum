@@ -97,7 +97,8 @@ void Application::FinishUpdate()
 		SaveGameRequest == false;
 	}
 
-	float secondsSinceStartup = startupTime.Read();
+	float secondsSinceStartup = startupTime.ReadSec();
+	
 
 	if (lastSecFrameTime.Read() > 1000) {
 		lastSecFrameTime.Start();
@@ -115,9 +116,7 @@ void Application::FinishUpdate()
 	input->GetMouseWorldPosition(x,y);
 	sprintf_s(title, 256, "Mouse position x %d y %d, Camera x %d y %d", x, y,render->camera.x,render->camera.y);*/
 
-
-	sprintf_s(title, 256, "FPS: %i Tile:[%d,%d] ", framesPerSecond);
-
+	sprintf_s(title, 256, "FPS: %i", framesPerSecond);
 
 
 
@@ -129,7 +128,7 @@ void Application::FinishUpdate()
 	delayt->Start();
 	if (maxFrameRate > 0 && delay > 0) SDL_Delay(delay);
 
-
+	
 	window->SetTitle(title);
 }
 
