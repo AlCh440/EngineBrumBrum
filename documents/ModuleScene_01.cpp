@@ -285,6 +285,7 @@ update_status ModuleScene_01::menuDisplay()
 
 void ModuleScene_01::testOpenGL()
 {
+    glewInit();
     //plane
     glLineWidth(1.0f);
 
@@ -304,19 +305,26 @@ void ModuleScene_01::testOpenGL()
     //DrawCube02();
 	
                             // ID of VBO
-  // float3 vertices[] = {
-  // {-1., -1., -1.}, {1., -1., -1.},
-  // {-1., 1., -1.}, {1., 1., -1.},
-  // {-1., -1., 1.}, {1., -1., 1.},
-  // {-1., 1., 1.}, {1., 1., 1.}
-  //
-  // };
-  //float vertices[] = { -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1 };
-  //
-  //uint my_id = 0;
-  //glGenBuffers(1, (GLuint*)&(my_id));
-  //glBindBuffer(GL_ARRAY_BUFFER, my_id);
-  //glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8 * 3, vertices, GL_STATIC_DRAW);
+   float3 vertices[] = {
+   {-1., -1., -1.}, {1., -1., -1.},
+   {-1., 1., -1.}, {1., 1., -1.},
+   {-1., -1., 1.}, {1., -1., 1.},
+   {-1., 1., 1.}, {1., 1., 1.}
+  
+   };
+ 
+  
+  uint my_id = 0;
+  glGenBuffers(1, (GLuint*)&(my_id));
+  glBindBuffer(GL_ARRAY_BUFFER, my_id);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8 * 3, vertices, GL_STATIC_DRAW);
+
+  glEnableClientState(GL_VERTEX_ARRAY);
+  glBindBuffer(GL_ARRAY_BUFFER, my_id);
+  glVertexPointer(3, GL_FLOAT, 0, NULL);
+  
+  glDrawArrays(GL_TRIANGLES, 0, 12);
+  glDisableClientState(GL_VERTEX_ARRAY);
 }
 
 void ModuleScene_01::DrawCube01()
