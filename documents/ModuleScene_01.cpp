@@ -303,8 +303,8 @@ void ModuleScene_01::testOpenGL()
     glEnd();
 
     //DrawCube02();
-	
-                            // ID of VBO
+
+
    float3 vertices[] = {
    {-1., -1., -1.}, {1., -1., -1.},
    {-1., 1., -1.}, {1., 1., -1.},
@@ -313,17 +313,33 @@ void ModuleScene_01::testOpenGL()
   
    };
  
+   int indices[] = {
+      4,5,6,	5,7,6,
+      5,1,7,	1,3,7,
+      0,4,2,	4,6,2,
+      6,7,2,	7,3,2,
+      1,0,3,	0,2,3,
+      0,4,5,	0,5,
+   };
   
   uint my_id = 0;
   glGenBuffers(1, (GLuint*)&(my_id));
   glBindBuffer(GL_ARRAY_BUFFER, my_id);
   glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8 * 3, vertices, GL_STATIC_DRAW);
 
+  int my_indices = 0;
+  glGenBuffers(1, (GLuint*)&(my_indices));
+  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
+  glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint) * 36, indices, GL_STATIC_DRAW);
+
   glEnableClientState(GL_VERTEX_ARRAY);
   glBindBuffer(GL_ARRAY_BUFFER, my_id);
   glVertexPointer(3, GL_FLOAT, 0, NULL);
   
-  glDrawArrays(GL_TRIANGLES, 0, 12);
+  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
+  glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, NULL);
+
+  //glDrawArrays(GL_TRIANGLES, 0, 8);
   glDisableClientState(GL_VERTEX_ARRAY);
 }
 
