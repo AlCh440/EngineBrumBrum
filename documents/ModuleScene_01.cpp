@@ -332,6 +332,8 @@ void ModuleScene_01::testOpenGL()
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
   glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint) * 36, indices, GL_STATIC_DRAW);
 
+  glRotatef(0.1f, 1.0f, 1.0f, 0.0f);
+
   glEnableClientState(GL_VERTEX_ARRAY);
   glBindBuffer(GL_ARRAY_BUFFER, my_id);
   glVertexPointer(3, GL_FLOAT, 0, NULL);
