@@ -80,10 +80,23 @@ update_status ModuleScene_01::menuDisplay()
     {
         if (ImGui::BeginMenu("File"))
         {
+
+
+            if (ImGui::MenuItem("New Scene", "CTRL+N")) {}
+            if (ImGui::MenuItem("Open Scene", "CTRL+O")) {}
+            ImGui::Separator();
+            if (ImGui::MenuItem("Save", "CTRL+S")) {}
+            if (ImGui::MenuItem("Save As", "CTRL+Shift+S")) {}
+            ImGui::Separator();
+            if (ImGui::MenuItem("New Project")) {}
+            if (ImGui::MenuItem("Open Project")) {}
+            if (ImGui::MenuItem("Save Project")) {}
+
             if (ImGui::Button("Close"))
             {
                 return UPDATE_STOP;
             }
+
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Edit"))
@@ -128,9 +141,6 @@ update_status ModuleScene_01::menuDisplay()
                 ImGui::Checkbox("Full Screen", &fullscreen);
                 {
 
-
-
-
                     if (fullscreen == true)
                     {
                         fullscreenno = true;
@@ -142,6 +152,8 @@ update_status ModuleScene_01::menuDisplay()
                         fullscreenno = false;
                         App->window->SetFullscreenNo(fullscreenno);
                     }
+
+
                 }
 
                 ImGui::Checkbox("Vsync", &vsync);
@@ -166,29 +178,80 @@ update_status ModuleScene_01::menuDisplay()
 
 
 
-
                 ImGui::EndMenu();
             }
+
+            // Vector3 fps_log;
+
+            if (ImGui::BeginMenu("Application"))
+            {
+                char title[25];
+
+                //sprintf_s(title, 25, "Frame rate %.1f", fps_log[fps_log.size() - 1]);
+                ImGui::EndMenu();
+            }
+
+
+
 
             if (ImGui::Button("Renderer"))
             {
 
 
             }
-            if (ImGui::Button("Input"))
+
+            if (ImGui::BeginMenu("Input"))
             {
 
 
+
+                ImGuiIO& io = ImGui::GetIO();
+                if (ImGui::TreeNode("Mouse State"))
+                {
+                    if (ImGui::IsMousePosValid())
+                        ImGui::Text("Mouse pos: (%g, %g)", io.MousePos.x, io.MousePos.y);
+                    else
+                        ImGui::Text("Mouse pos: <INVALID>");
+                    ImGui::Text("Mouse delta: (%g, %g)", io.MouseDelta.x, io.MouseDelta.y);
+
+                    int count = IM_ARRAYSIZE(io.MouseDown);
+                    ImGui::Text("Mouse down:");         for (int i = 0; i < count; i++) if (ImGui::IsMouseDown(i)) { ImGui::SameLine(); ImGui::Text("b%d (%.02f secs)", i, io.MouseDownDuration[i]); }
+                    ImGui::Text("Mouse clicked:");      for (int i = 0; i < count; i++) if (ImGui::IsMouseClicked(i)) { ImGui::SameLine(); ImGui::Text("b%d (%d)", i, ImGui::GetMouseClickedCount(i)); }
+                    ImGui::Text("Mouse released:");     for (int i = 0; i < count; i++) if (ImGui::IsMouseReleased(i)) { ImGui::SameLine(); ImGui::Text("b%d", i); }
+                    ImGui::Text("Mouse wheel: %.1f", io.MouseWheel);
+                    ImGui::Text("Pen Pressure: %.1f", io.PenPressure); // Note: currently unused
+                    ImGui::TreePop();
+                }
+
+
+
+
+
+                ImGui::EndMenu();
+
+
             }
-            if (ImGui::Button("Audio"))
+
+
+
+            if (ImGui::BeginMenu("Audio"))
             {
+                static int i0 = 60;
+                ImGui::InputInt("Volume", &i0);
 
 
+                ImGui::EndMenu();
             }
+
 
             ImGui::EndMenu();
+
         }
+
+
+
         ImGui::EndMainMenuBar();
+
     }
 
 
@@ -196,14 +259,14 @@ update_status ModuleScene_01::menuDisplay()
     {
         ImGui::Begin("About", 0, ImGuiWindowFlags_MenuBar);
         {
-           
+
 
             ImGui::Text("ABOUT THIS DEMO:");
             ImGui::BulletText("BrumBrum Engine");
             ImGui::BulletText("Best Motor ever not of a car");
-           
+
             ImGui::Text("PROGRAMMER GUIDE:");
-            
+
             ImGui::BulletText("Abochan & Juan Fernando (https://github.com/AlCh440/EngineBrumBrum)");
             ImGui::BulletText("We have the Mathegeolib, the glew, the JSON and the SDL");
             ImGui::BulletText("License");
