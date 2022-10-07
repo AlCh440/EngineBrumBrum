@@ -1,17 +1,20 @@
 #include "Application.h"
-#include <fstream>
 
-#include "rapidjson/document.h"
-#include "rapidjson/writer.h"
-#include "rapidjson/stringbuffer.h"
+#include "parson/include/parson.c"
+#include "parson/include/parson.h"
 #include <iostream>
 
-using namespace rapidjson;
+
 
 
 
 using namespace std;
-using namespace rapidjson;
+
+const char* get_file_path(const char* filename) {
+	static char path_buf[2048] = { 0 };
+	memset(path_buf, 0, sizeof(path_buf));
+	return path_buf;
+}
 
 Application::Application()
 {
@@ -94,7 +97,7 @@ void Application::FinishUpdate()
 	if (SaveGameRequest)
 	{
 		SaveGame();
-		SaveGameRequest == false;
+		SaveGameRequest = false;
 	}
 
 	float secondsSinceStartup = startupTime.ReadSec();
@@ -135,11 +138,22 @@ void Application::FinishUpdate()
 void Application::SaveGame()
 {
 	
-	char* chara = "{rapidjson}";
+		JSON_Value* schema = json_parse_string("{\"BrumBrum\":\"\"}");
+		JSON_Value* user_data = json_parse_file("user_data.json");
+		const char* buf;
+		const char* name = NULL;
+		if (user_data == NULL || json_validate(schema, user_data) != JSONSuccess) {
+			buf = { "are" };
+			user_data = json_value_init_object();
+			json_object_set_string(json_object(user_data), "name", buf);
+			json_serialize_to_file(user_data, "user_data.json");
+		}
+		name = json_object_get_string(json_object(user_data), "name");
+		printf("Hello, %s.", name);
+		json_value_free(schema);
+		json_value_free(user_data);
+		
 	
-	Document doc;
-
-	//doc.Parse(chara);
 }
 
 void Application::LoadGame()
