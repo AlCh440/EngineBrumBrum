@@ -1,5 +1,5 @@
-- NOM
-- PCG (RANDOM NUMBER GENERATOR) FER
+- NOM -Alchan trias tu
+- PCG (RANDOM NUMBER GENERATOR) FER estoy en ello que em donava errores
 - Save/Load JASON
 	ALBERT
 - CONFIGURATION WINDOW FINALLE
