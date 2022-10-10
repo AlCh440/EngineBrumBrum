@@ -1,15 +1,18 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(500,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  Application.cpp
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(200,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1229,27): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1231,27): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1331,12): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1802,10): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1862,10): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(90,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(126,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(132,47): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(172,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(183,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(191,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
-  3D Physics.vcxproj -> C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Debug\Game\3D Physics - class5.exe
+﻿C:\visualstudio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  ModuleScene_01.cpp
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(29,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(29,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(30,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(30,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(39,23): warning C4018: '<': signed/unsigned mismatch
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(39,51): warning C4018: '<': signed/unsigned mismatch
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(40,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(40,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(41,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(41,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(42,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(42,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(58,23): warning C4018: '<': signed/unsigned mismatch
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(58,51): warning C4018: '<': signed/unsigned mismatch
+C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(251,22): warning C4101: 'title': unreferenced local variable
+  3D Physics.vcxproj -> C:\GitHub\EngineBrumBrum\documents\Debug\Game\3D Physics - class5.exe

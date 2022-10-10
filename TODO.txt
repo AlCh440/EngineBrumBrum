@@ -4,7 +4,7 @@
 	ALBERT
 - CONFIGURATION WINDOW FINALLE
 - LOG OUTPUT TO CONSOLE!!! NO IDEA
-- "ABOUT" needs to complete
+- "ABOUT" needs to complete -->DONE
 - Print opengl driver info + all GLEW output in the console
 - Make sure OpenGL is correctly initialized and uninitialized
 - Add buttons to directly enable/disable :
