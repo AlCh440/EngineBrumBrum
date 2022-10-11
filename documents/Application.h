@@ -67,4 +67,7 @@ private:
 
 	bool SaveGameRequest = false;
 	bool LoadGameRequest = false;
+
+public:
+	string nameOrg;
 };

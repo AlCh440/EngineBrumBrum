@@ -100,6 +100,12 @@ void Application::FinishUpdate()
 		SaveGameRequest = false;
 	}
 
+	if (LoadGameRequest)
+	{
+		LoadGame();
+		LoadGameRequest = false;
+	}
+
 	float secondsSinceStartup = startupTime.ReadSec();
 	
 
@@ -141,24 +147,27 @@ void Application::SaveGame()
 		JSON_Value* schema = json_parse_string("{\"BrumBrum\":\"\"}");
 		JSON_Value* user_data = json_parse_file("user_data.json");
 		const char* buf;
+		const char* org = { "Fountain engine" };
 		const char* name = NULL;
 		if (user_data == NULL || json_validate(schema, user_data) != JSONSuccess) {
-			buf = { "are" };
+			buf = { "are & toty" };
 			user_data = json_value_init_object();
+			json_object_set_string(json_object(user_data), "Organization", org);
 			json_object_set_string(json_object(user_data), "name", buf);
 			json_serialize_to_file(user_data, "user_data.json");
 		}
-		name = json_object_get_string(json_object(user_data), "name");
-		printf("Hello, %s.", name);
+		
 		json_value_free(schema);
 		json_value_free(user_data);
-		
 	
 }
 
 void Application::LoadGame()
 {
-
+	JSON_Value* user_data = json_parse_file("user_data.json");
+	nameOrg = json_object_get_string(json_object(user_data), "name");
+		
+	json_value_free(user_data);
 }
 
 // Call PreUpdate, Update and PostUpdate on all modules
@@ -175,8 +184,11 @@ update_status Application::Update()
 		item++;
 	}
 
-	if (input->GetKey(SDL_SCANCODE_S) == KEY_DOWN)
+	if (input->GetKey(SDL_SCANCODE_P) == KEY_DOWN)
 		SaveGameRequest = true;
+
+	if (input->GetKey(SDL_SCANCODE_O) == KEY_DOWN)
+		LoadGameRequest = true;
 
 	item = list_modules.begin();
 

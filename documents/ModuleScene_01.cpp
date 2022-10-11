@@ -194,6 +194,37 @@ update_status ModuleScene_01::menuDisplay()
 
             }
 
+            glEnable(GL_TEXTURE_2D);
+            constexpr int check01 = 44;
+            constexpr int check02 = 44;
+
+            GLubyte checkerImage[check01][check02][4];
+            for (int i = 0; i < check01; i++) {
+                for (int j = 0; j < check02; j++) {
+                    int c = ((((i & 0x8) == 0) ^ (((j & 0x8)) == 0))) * 255;
+                    checkerImage[i][j][0] = (GLubyte)c;
+                    checkerImage[i][j][1] = (GLubyte)c;
+                    checkerImage[i][j][2] = (GLubyte)c;
+                    checkerImage[i][j][3] = (GLubyte)255;
+                }
+            }
+            
+            
+            
+            uint my_text = 0;
+            glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+            glGenTextures(1, &my_text);
+            glBindTexture(GL_TEXTURE_2D, my_text);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, check01, check02,
+                0, GL_RGBA, GL_UNSIGNED_BYTE, checkerImage);
+            
+            
+            ImGui::Image((GLuint*)my_text, ImVec2(500, 500));
+
             ImGui::EndMenu();
         }
 
