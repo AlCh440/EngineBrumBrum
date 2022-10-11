@@ -44,6 +44,13 @@ public:
 	bool vsync = false;
 	bool boolWireframe = false;
 
+	bool activateDepthTest = false;
+	bool activateCullFace = false;
+	bool activateLightning = false;
+	bool activateColorMaterial = false;
+	bool activateTexture2D = false;
+
+
 };
 
 

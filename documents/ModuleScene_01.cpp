@@ -257,10 +257,35 @@ update_status ModuleScene_01::menuDisplay()
 
 
 
-            if (ImGui::Button("Renderer"))
+            if (ImGui::BeginMenu("Renderer"))
             {
+                if (ImGui::MenuItem("Depth Test")) 
+                {
+                    activateDepthTest = !activateDepthTest;
+                }
+
+                if (ImGui::MenuItem("Cull Face"))
+                {
+                    activateCullFace = !activateCullFace;
+                }
+
+                if (ImGui::MenuItem("Lightning"))
+                {
+                    activateLightning = !activateLightning;
+                }
+
+                if (ImGui::MenuItem("Color Material"))
+                {
+                    activateColorMaterial = !activateColorMaterial;
+                }
+
+                if (ImGui::MenuItem("Texture 2D"))
+                {
+                    activateTexture2D = !activateTexture2D;
+                }
 
 
+                ImGui::EndMenu();
             }
 
             if (ImGui::BeginMenu("Input"))
@@ -372,9 +397,16 @@ update_status ModuleScene_01::menuDisplay()
         ImGui::End();
     }
 
+    if (activateDepthTest == true)
+    {
+
+    }
+
 
     return UPDATE_CONTINUE;
 }
+
+
 
 void ModuleScene_01::testOpenGL()
 {
