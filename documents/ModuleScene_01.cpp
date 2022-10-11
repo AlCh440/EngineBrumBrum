@@ -13,6 +13,8 @@
 #include <gl/GLU.h>
 #include <vector>
 
+
+
 #define GLVertexDD(idx) {float3& v = vertices[*idx - 1]; glVertex3f(v.x, v.y, v.z);}
 
 class SolidSphere
@@ -259,27 +261,27 @@ update_status ModuleScene_01::menuDisplay()
 
             if (ImGui::BeginMenu("Renderer"))
             {
-                if (ImGui::MenuItem("Depth Test")) 
+                if (ImGui::Button("Depth Test")) 
                 {
                     activateDepthTest = !activateDepthTest;
                 }
 
-                if (ImGui::MenuItem("Cull Face"))
+                if (ImGui::Button("Cull Face"))
                 {
                     activateCullFace = !activateCullFace;
                 }
 
-                if (ImGui::MenuItem("Lightning"))
+                if (ImGui::Button("Lightning"))
                 {
                     activateLightning = !activateLightning;
                 }
 
-                if (ImGui::MenuItem("Color Material"))
+                if (ImGui::Button("Color Material"))
                 {
                     activateColorMaterial = !activateColorMaterial;
                 }
 
-                if (ImGui::MenuItem("Texture 2D"))
+                if (ImGui::Button("Texture 2D"))
                 {
                     activateTexture2D = !activateTexture2D;
                 }
@@ -396,9 +398,117 @@ update_status ModuleScene_01::menuDisplay()
 
         ImGui::End();
     }
+    
+   
 
     if (activateDepthTest == true)
     {
+        /*void mainn()
+        {
+            FragColor = vec4(vec3(gl_FragCoord.z), 1.0);
+        }*/
+        
+        glEnable(GL_DEPTH_TEST);
+        glDepthFunc(GL_ALWAYS);
+
+        
+
+        /*out vec4 FragColor;
+
+        float near = 0.1;
+        float far = 100.0;
+
+        float LinearizeDepth(float depth)
+        {
+            float z = depth * 2.0 - 1.0; // back to NDC 
+            return (2.0 * near * far) / (far + near - z * (far - near));
+        }
+
+        void main()
+        {
+            float depth = LinearizeDepth(gl_FragCoord.z) / far; // divide by far for demonstration
+            FragColor = vec4(vec3(depth), 1.0);
+        }*/
+    }
+
+    if (activateCullFace == true)
+    {
+        float vertices[] = {
+            // clockwise
+            vertices[0], // vertex 1
+            vertices[1], // vertex 2
+            vertices[2], // vertex 3
+            // counter-clockwise
+            vertices[0], // vertex 1
+            vertices[2], // vertex 3
+            vertices[1]  // vertex 2  
+        };
+
+        glEnable(GL_CULL_FACE);
+
+        glCullFace(GL_BACK);
+        glFrontFace(GL_CW);
+
+    }
+
+    if (activateLightning == true)
+    {
+
+    }
+
+    if (activateColorMaterial == true)
+    {
+     
+    }
+
+    if (activateTexture2D == true)
+    {
+        float texCoords[] = 
+        {
+        0.0f, 0.0f,  // lower-left corner  
+        1.0f, 0.0f,  // lower-right corner
+        0.5f, 1.0f   // top-center corner
+        };
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
+
+        float borderColor[] = { 1.0f, 1.0f, 0.0f, 1.0f };
+        glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
+
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+
+        unsigned int texture;
+        glGenTextures(1, &texture);
+
+        glBindTexture(GL_TEXTURE_2D, texture);
+
+
+        //glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        float vertices[] = {
+            // positions          // colors           // texture coords
+             0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
+             0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
+            -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
+            -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
+        };
+
+        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+        glEnableVertexAttribArray(2);
+
+        glBindTexture(GL_TEXTURE_2D, texture);
+       // glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+    
 
     }
 
@@ -427,8 +537,7 @@ void ModuleScene_01::testOpenGL()
     }
     glEnd();
 
-    SolidSphere* sphere01 = new SolidSphere(2, 20, 20);
-    sphere01->draw(0, 3, 0);
+    DrawCubeIndices();
 }
 
 update_status ModuleScene_01::UpdateGeometry()

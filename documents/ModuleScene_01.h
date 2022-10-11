@@ -50,6 +50,9 @@ public:
 	bool activateColorMaterial = false;
 	bool activateTexture2D = false;
 
+	int width;
+	int height;
+
 
 };
 
