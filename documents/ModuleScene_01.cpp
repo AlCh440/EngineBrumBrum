@@ -3,6 +3,9 @@
 #include "ModuleScene_01.h"
 #include "ModuleWindow.h"
 
+
+#include "parson/include/parson.h"
+
 #include "imgui.h"
 #include "imgui_impl_opengl3.h"
 #include "imgui_impl_sdl.h"
@@ -234,20 +237,7 @@ update_status ModuleScene_01::menuDisplay()
             {
                 ImGui::Checkbox("Full Screen", &fullscreen);
                 {
-
-                    if (fullscreen == true)
-                    {
-                        fullscreenno = true;
-                        App->window->SetFullscreen(fullscreen);
-
-                    }
-                    if (fullscreen == false)
-                    {
-                        fullscreenno = false;
-                        App->window->SetFullscreenNo(fullscreenno);
-                    }
-
-
+                    App->window->SetFullscreen(fullscreen);
                 }
 
                 ImGui::Checkbox("Wireframe", &boolWireframe);
@@ -546,7 +536,6 @@ update_status ModuleScene_01::menuDisplay()
 
     return UPDATE_CONTINUE;
 }
-
 
 
 void ModuleScene_01::testOpenGL()
@@ -886,6 +875,16 @@ void ModuleScene_01::DrawCubeIndices()
 void ModuleScene_01::OnCollision(PhysBody3D* body1, PhysBody3D* body2)
 {
 }
+
+bool ModuleScene_01::Save()
+{
+    //json_object_set_boolean(json_object(data), "Fullscreen", fullscreen);
+    //json_object_set_boolean(json_object(data), "Vsync", vsync);
+    //json_object_set_boolean(json_object(data), "Wireframe", boolWireframe);
+
+    return true;
+}
+
 
 
 

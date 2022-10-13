@@ -106,6 +106,11 @@ void Application::FinishUpdate()
 		LoadGameRequest = false;
 	}
 
+	if (CreateFileRequest)
+	{
+		CreateFile();
+		CreateFileRequest = false;
+	}
 	float secondsSinceStartup = startupTime.ReadSec();
 	
 
@@ -141,32 +146,76 @@ void Application::FinishUpdate()
 	window->SetTitle(title);
 }
 
+void Application::CreateFile()
+{
+	JSON_Value* schema = json_parse_string("{\"BrumBrum\":\"\"}");
+	JSON_Value* user_data = json_parse_file("user_data.json");
+
+
+	if (user_data == NULL || json_validate(schema, user_data) != JSONSuccess) {
+
+		user_data = json_value_init_object();
+		json_object_set_string(json_object(user_data), "Organization", "CITM-UPC");
+		json_object_set_string(json_object(user_data), "Name", "Fountain Engine");
+		json_serialize_to_file(user_data, "user_data.json");
+	}
+
+	json_value_free(schema);
+	json_value_free(user_data);
+}
+
 void Application::SaveGame()
 {
 	
+	bool ret = true;
 		JSON_Value* schema = json_parse_string("{\"BrumBrum\":\"\"}");
 		JSON_Value* user_data = json_parse_file("user_data.json");
-		const char* buf;
-		const char* org = { "Fountain engine" };
-		const char* name = NULL;
+
+
 		if (user_data == NULL || json_validate(schema, user_data) != JSONSuccess) {
-			buf = { "are & toty" };
+			
 			user_data = json_value_init_object();
-			json_object_set_string(json_object(user_data), "Organization", org);
-			json_object_set_string(json_object(user_data), "name", buf);
+			json_object_set_string(json_object(user_data), "Organization", nameOrg);
+			json_object_set_string(json_object(user_data), "Name", nameEngine);
+
+			
+
 			json_serialize_to_file(user_data, "user_data.json");
 		}
 		
+		
+	
+		// Call Init() in all modules
+		list<Module*>::iterator item = list_modules.begin();
+
+
+		while (item != list_modules.end() && ret == true) {
+
+			ret = item._Ptr->_Myval->Save();
+			item++;
+		}
+
 		json_value_free(schema);
 		json_value_free(user_data);
-	
+		
+		if (!ret) LOG("COULDN'T SAVE");
+		
 }
 
 void Application::LoadGame()
 {
 	JSON_Value* user_data = json_parse_file("user_data.json");
-	nameOrg = json_object_get_string(json_object(user_data), "name");
-		
+	nameOrg = json_object_get_string(json_object(user_data), "Organization");
+	nameEngine = json_object_get_string(json_object(user_data), "Name");
+
+	scene_01->fullscreen = json_object_get_boolean(json_object(user_data), "Fullscreen");
+	window->SetFullscreen(scene_01->fullscreen);
+
+	scene_01->vsync = json_object_get_boolean(json_object(user_data), "vsync");
+
+	scene_01->boolWireframe = json_object_get_boolean(json_object(user_data), "Wireframe");
+
+
 	json_value_free(user_data);
 }
 
@@ -189,6 +238,9 @@ update_status Application::Update()
 
 	if (input->GetKey(SDL_SCANCODE_O) == KEY_DOWN)
 		LoadGameRequest = true;
+
+	if (input->GetKey(SDL_SCANCODE_I) == KEY_DOWN)
+		CreateFileRequest = true;
 
 	item = list_modules.begin();
 

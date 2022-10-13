@@ -4,6 +4,7 @@
 #include "Globals.h"
 
 
+
 #define MAX_SNAKE 2
 
 struct PhysBody3D;
@@ -34,6 +35,7 @@ public:
 	void DrawCubeIndices();
 
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
+	bool Save() override;
 
 	bool myToolActive = true;
 	bool myTryActive = true;

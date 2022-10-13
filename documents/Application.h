@@ -62,12 +62,15 @@ private:
 	void PrepareUpdate();
 	void FinishUpdate();
 
+	void CreateFile();
 	void SaveGame();
 	void LoadGame();
 
+	bool CreateFileRequest = false;
 	bool SaveGameRequest = false;
-	bool LoadGameRequest = false;
+	bool LoadGameRequest = true;
 
 public:
-	string nameOrg;
+	const char* nameOrg = NULL;
+	const char* nameEngine = NULL;
 };
