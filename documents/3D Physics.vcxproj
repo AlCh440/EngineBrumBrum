@@ -20,7 +20,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -103,9 +103,6 @@
     <ClInclude Include="Assimp\assimp\ColladaMetaData.h" />
     <ClInclude Include="Assimp\assimp\color4.h" />
     <ClInclude Include="Assimp\assimp\commonMetaData.h" />
-    <ClInclude Include="Assimp\assimp\Compiler\poppack1.h" />
-    <ClInclude Include="Assimp\assimp\Compiler\pstdint.h" />
-    <ClInclude Include="Assimp\assimp\Compiler\pushpack1.h" />
     <ClInclude Include="Assimp\assimp\config.h" />
     <ClInclude Include="Assimp\assimp\CreateAnimMesh.h" />
     <ClInclude Include="Assimp\assimp\DefaultIOStream.h" />
@@ -139,8 +136,6 @@
     <ClInclude Include="Assimp\assimp\ObjMaterial.h" />
     <ClInclude Include="Assimp\assimp\ParsingUtils.h" />
     <ClInclude Include="Assimp\assimp\pbrmaterial.h" />
-    <ClInclude Include="Assimp\assimp\port\AndroidJNI\AndroidJNIIOSystem.h" />
-    <ClInclude Include="Assimp\assimp\port\AndroidJNI\BundledAssetIOSystem.h" />
     <ClInclude Include="Assimp\assimp\postprocess.h" />
     <ClInclude Include="Assimp\assimp\Profiler.h" />
     <ClInclude Include="Assimp\assimp\ProgressHandler.hpp" />
@@ -264,6 +259,7 @@
     <ClInclude Include="MathGeoLib-master\src\Math\vec2d.h" />
     <ClInclude Include="MathGeoLib-master\src\Time\Clock.h" />
     <ClInclude Include="ModuleCamera3D.h" />
+    <ClInclude Include="ModuleLoadFBX.h" />
     <ClInclude Include="ModuleRenderer3D.h" />
     <ClInclude Include="ModuleScene_01.h" />
     <ClInclude Include="Module.h" />
@@ -334,6 +330,7 @@
     <ClCompile Include="ModuleAudio.cpp" />
     <ClCompile Include="ModuleCamera3D.cpp" />
     <ClCompile Include="ModuleInput.cpp" />
+    <ClCompile Include="ModuleLoadFBX.cpp" />
     <ClCompile Include="ModuleRenderer3D.cpp" />
     <ClCompile Include="ModuleScene_01.cpp" />
     <ClCompile Include="ModuleWindow.cpp" />
@@ -341,8 +338,6 @@
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assimp\assimp-vc142-mt.dll" />
-    <None Include="Assimp\assimp\.editorconfig" />
     <None Include="Assimp\assimp\color4.inl" />
     <None Include="Assimp\assimp\material.inl" />
     <None Include="Assimp\assimp\matrix3x3.inl" />
@@ -392,8 +387,6 @@
     <Image Include="glew\doc\travis.png" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="Assimp\assimp\libx86\assimp-vc142-mt.lib" />
-    <Library Include="Assimp\assimp\libx86\assimp-vc142-mtd.lib" />
     <Library Include="glew\lib\Release\Win32\glew32.lib" />
     <Library Include="glew\lib\Release\Win32\glew32s.lib" />
     <Library Include="glew\lib\Release\x64\glew32.lib" />

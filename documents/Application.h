@@ -13,6 +13,7 @@
 #include "ModuleCamera3D.h"
 #include "ModuleScene_01.h"
 #include "PerfTimer.h"
+#include "ModuleLoadFBX.h"
 
 using namespace std;
 
@@ -26,6 +27,7 @@ public:
 	ModuleRenderer3D* renderer3D;
 	ModuleCamera3D* camera;
 	ModuleScene_01* scene_01;
+	ModuleLoadFBX* loadfbx;
 
 private:
 

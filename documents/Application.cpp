@@ -24,6 +24,7 @@ Application::Application()
 	renderer3D = new ModuleRenderer3D(this);
 	camera = new ModuleCamera3D(this);
 	scene_01 = new ModuleScene_01(this);
+	loadfbx = new ModuleLoadFBX(this);
 
 	// The order of calls is very important!
 	// Modules will Init() Start() and Update in this order
@@ -34,7 +35,7 @@ Application::Application()
 	AddModule(camera);
 	AddModule(input);
 	AddModule(audio);
-	
+	AddModule(loadfbx);
 	AddModule(scene_01);
 
 	// Renderer last!

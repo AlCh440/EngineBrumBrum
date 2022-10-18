@@ -1,18 +1,3 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(500,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  ModuleScene_01.cpp
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(34,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(34,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(35,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(35,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(44,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(44,51): warning C4018: '<': signed/unsigned mismatch
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(45,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(45,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(46,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(46,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(47,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(47,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(63,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(63,51): warning C4018: '<': signed/unsigned mismatch
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(274,22): warning C4101: 'title': unreferenced local variable
-  3D Physics.vcxproj -> C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Debug\Game\3D Physics - class5.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
+  ModuleLoadFBX.cpp
+  3D Physics.vcxproj -> C:\Users\albertcf5\Documents\GitHub\EngineBrumBrum\documents\Debug\Game\3D Physics - class5.exe
