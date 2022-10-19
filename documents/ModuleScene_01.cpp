@@ -17,7 +17,6 @@
 #include <vector>
 
 
-
 #define GLVertexDD(idx) {float3& v = vertices[*idx - 1]; glVertex3f(v.x, v.y, v.z);}
 
 class SolidSphere

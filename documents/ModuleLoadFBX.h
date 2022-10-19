@@ -16,8 +16,8 @@ public:
 
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
 	bool Save() override;
-
 	
+	void LoadFile(const char* file_path);
 
 
 };
