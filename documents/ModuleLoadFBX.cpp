@@ -8,7 +8,7 @@
 
 #pragma comment (lib, "Assimp/assimp/libx86/assimp-vc142-mt.lib")
 
-
+                                                                                                                                        
 ModuleLoadFBX::ModuleLoadFBX(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
 }
