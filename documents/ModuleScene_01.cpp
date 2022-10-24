@@ -112,6 +112,7 @@ bool ModuleScene_01::Start()
     // window is the SDL_Window*
     // context is the SDL_GLContext
 
+    checkers_tex = App->texturer->LoadCheckerTex();
  
 	return ret;
 }
@@ -121,12 +122,15 @@ bool ModuleScene_01::CleanUp()
 {
 	LOG("Unloading Intro scene");
 
+    
+
 	return true;
 }
 
 // Update
 update_status ModuleScene_01::Update(float dt)
 {
+    
     update_status ret = UPDATE_CONTINUE;
 
     ret = UpdateGeometry();
@@ -196,36 +200,9 @@ update_status ModuleScene_01::menuDisplay()
 
             }
 
-            glEnable(GL_TEXTURE_2D);
-            constexpr int check01 = 44;
-            constexpr int check02 = 44;
-
-            GLubyte checkerImage[check01][check02][4];
-            for (int i = 0; i < check01; i++) {
-                for (int j = 0; j < check02; j++) {
-                    int c = ((((i & 0x8) == 0) ^ (((j & 0x8)) == 0))) * 255;
-                    checkerImage[i][j][0] = (GLubyte)c;
-                    checkerImage[i][j][1] = (GLubyte)c;
-                    checkerImage[i][j][2] = (GLubyte)c;
-                    checkerImage[i][j][3] = (GLubyte)255;
-                }
-            }
+           
             
-            
-            
-            uint my_text = 0;
-            glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-            glGenTextures(1, &my_text);
-            glBindTexture(GL_TEXTURE_2D, my_text);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, check01, check02,
-                0, GL_RGBA, GL_UNSIGNED_BYTE, checkerImage);
-            
-            
-            ImGui::Image((GLuint*)my_text, ImVec2(500, 500));
+            ImGui::Image((GLuint*)checkers_tex, ImVec2(500, 500));
 
             ImGui::EndMenu();
         }
@@ -556,7 +533,7 @@ void ModuleScene_01::testOpenGL()
     }
     glEnd();
 
-    DrawCubeIndices();
+    DrawCheckerCube();
 }
 
 update_status ModuleScene_01::UpdateGeometry()
@@ -588,88 +565,125 @@ update_status ModuleScene_01::UpdateEditor()
     return ret;
 }
 
-void ModuleScene_01::DrawCube01()
+void ModuleScene_01::DrawCheckerCube01()
 {
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, checkers_tex);
+    
     //glTranslatef(1. + cum_val, 0., 1. + cum_val);
     glBegin(GL_TRIANGLES);
 
-    glColor3f(1., 1., 0.);
+   
 
     
     // Z = 1 / TriB
-    glColor3f(1., 1., 0.);
+    glTexCoord2f(0, 0);
     glVertex3f(-1., -1., 1.);	// 5
+    glTexCoord2f(0, 1);
     glVertex3f(1., -1., 1.);	// 6
-    glVertex3f(1., 1., 1.);		// 8
+    glTexCoord2f(1, 1);
+    glVertex3f(1., 1., 1.);	// 8
 
-    // Z = 1 / TriT
+    // Z = 1 / TriT glTexCoord2f();
+    glTexCoord2f(0, 0);
     glVertex3f(-1., -1., 1.);	// 5
-    glVertex3f(1., 1., 1.);		// 8
+    glTexCoord2f(1, 1);
+    glVertex3f(1., 1., 1.);	// 8
+    glTexCoord2f(1, 0);
     glVertex3f(-1., 1., 1.);	// 7
-
-    // *Backfaces have to be drawn in the inverse order you expect
-    // You will look at them when you are rotated backwards
+    
+    //// *Backfaces have to be drawn in the inverse order you expect
+    //// You will look at them when you are rotated backwards
     // Z = -1 / TriB
-    glColor3f(1., 0., 1.);
+    glTexCoord2f(0, 1);
     glVertex3f(1., 1., -1.);	// 4
+    glTexCoord2f(0, 0);
     glVertex3f(1., -1., -1.);	// 2
-    glVertex3f(-1., -1., -1.);	// 1
-
+    glTexCoord2f(1, 0);
+    glVertex3f(-1., -1., -1.);// 1
+    
     // Z = -1 / TriT
-    glVertex3f(-1., -1., -1.);	// 1
+    glTexCoord2f(1, 0);
+    glVertex3f(-1., -1., -1.);// 1
+    glTexCoord2f(1, 1);
     glVertex3f(-1., 1., -1.);	// 3
+    glTexCoord2f(0, 1);
     glVertex3f(1., 1., -1.);	// 4
-
+    
     // Top bottom and sides now...
-    glColor3f(0., 1., 1.);
+
     // Top / TriR
+    glTexCoord2f(1, 1);
     glVertex3f(1., 1., -1.);	// 4
+    glTexCoord2f(0, 1);
     glVertex3f(-1., 1., -1.);	// 3
+    glTexCoord2f(1, 0);
     glVertex3f(1., 1., 1.);		// 8
-
+    
     // Top / TriL
+    glTexCoord2f(0, 1);
     glVertex3f(-1., 1., -1.);	// 3
+    glTexCoord2f(0, 0);
     glVertex3f(-1., 1., 1.);	// 7
+    glTexCoord2f(1, 0);
     glVertex3f(1., 1., 1.);		// 8
-
+    
     // Bottom / TriR
-    glColor3f(1., 0., 0.);
+    glTexCoord2f(1, 0);
     glVertex3f(1., -1., -1.);	// 2
+    glTexCoord2f(1, 1);
     glVertex3f(1., -1., 1.);	// 6
+    glTexCoord2f(0, 0);
     glVertex3f(-1., -1., -1.);	// 1
-
+    
     // Bottom / TriL
+    glTexCoord2f(0, 0);
     glVertex3f(-1., -1., -1.);	// 1
+    glTexCoord2f(1, 1);
     glVertex3f(1., -1., 1.);	// 6
+    glTexCoord2f(0, 1);
     glVertex3f(-1., -1., 1.);	// 5
-
+    
     // SideL / TriT
-    glColor3f(0., 1., 0.);
+    glTexCoord2f(0 , 0);
     glVertex3f(-1., -1., -1.);	// 1
+    glTexCoord2f(1, 1);
     glVertex3f(-1., 1., 1.);	// 7
+    glTexCoord2f(0, 1);
     glVertex3f(-1., 1., -1.);	// 3
-
+    
     // SideL / TriB
+    glTexCoord2f(0, 0);
     glVertex3f(-1., -1., -1.);	// 1
+    glTexCoord2f(1, 0);
     glVertex3f(-1., -1., 1.);	// 5
+    glTexCoord2f(1, 1);
     glVertex3f(-1., 1., 1.);	// 7
-
+    
     // SideR / TriT
-    glColor3f(0., 0., 1.);
+    glTexCoord2f(1, 0);
     glVertex3f(1., -1., -1.);	// 2
+    glTexCoord2f(1, 1);
     glVertex3f(1., 1., -1.);	// 4
+    glTexCoord2f(0, 1);
     glVertex3f(1., 1., 1.);		// 8
-
+    
+    glTexCoord2f(1, 0);
     glVertex3f(1., -1., -1.);	// 2
+    glTexCoord2f(0, 1);
     glVertex3f(1., 1., 1.);		// 8
+    glTexCoord2f(0, 0);
     glVertex3f(1., -1., 1.);	// 6
 
     glEnd();
-
+    glDisable(GL_TEXTURE_2D);
 }
 
 void ModuleScene_01::DrawCube02()
 {
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, checkers_tex);
+
     float3 vertices[] = {
    {-1., -1., -1.}, {1., -1., -1.},
    {-1., 1., -1.}, {1., 1., -1.},
@@ -686,22 +700,44 @@ void ModuleScene_01::DrawCube02()
         2,4,8,	2,8,6
     };
 
-    float3 colors[] = {
-    {1., 1., 0.}, {1., 0., 1.}, {0., 1., 1.},
-    {1., 0., 0.}, {0., 1., 0.}, {0., 0., 1.}
-    };
+    GLfloat x, y = 0;
 
     glBegin(GL_TRIANGLES);
     int col = -1;
     for (int i = 0; i < sizeof(indices) / sizeof(int); ++i) {
         if (i % 6 == 0) {
             ++col;
-            glColor3f(colors[col].x, colors[col].y, colors[col].z);
+           
+            switch (i)
+            {
+            case 0:
+            {
+                x = 0;
+                y = 1;
+            } break;
+            case 1:
+            {
+                x = 1;
+                y = 1;
+            } break;
+            case 2:
+            {
+                x = 0;
+                y = 0;
+            } break;
+            default:
+                x = 0;
+                y = 0;
+                break;
+            }
         }
+
         float3& v = vertices[indices[i] - 1];
+        glTexCoord2f(x, y);
         glVertex3f(v.x, v.y, v.z);
     }
     glEnd();
+    glDisable(GL_TEXTURE_2D);
 }
 
 void ModuleScene_01::DrawCube03()
@@ -722,6 +758,7 @@ void ModuleScene_01::DrawCube03()
         2,4,8,	2,8,6
     };
 
+    
 
     glBegin(GL_TRIANGLES);
     int* idx = indices;
@@ -863,6 +900,63 @@ void ModuleScene_01::DrawCubeIndices()
     glEnableClientState(GL_VERTEX_ARRAY);
     glBindBuffer(GL_ARRAY_BUFFER, my_id);
     glVertexPointer(3, GL_FLOAT, 0, NULL);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
+    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, NULL);
+
+    //glDrawArrays(GL_TRIANGLES, 0, 8);
+    glDisableClientState(GL_VERTEX_ARRAY);
+}
+
+void ModuleScene_01::DrawCheckerCube()
+{
+
+    float3 vertices[] = {
+{-1., -1., -1.}, {1., -1., -1.},
+{-1., 1., -1.}, {1., 1., -1.},
+{-1., -1., 1.}, {1., -1., 1.},
+{-1., 1., 1.}, {1., 1., 1.}
+
+    };
+
+    int indices[] = {
+       4,5,6,	5,7,6,
+       5,1,7,	1,3,7,
+       0,4,2,	4,6,2,
+       6,7,2,	7,3,2,
+       1,0,3,	0,2,3,
+       0,1,4,    1,5,4
+    };
+
+    int uv[] = {
+        0,0,0,1,1,1,0,0,1,1,1,0,0,1,0,0,1,0,1,0,1,1,0,1,1,1,0,1,1,0,0,1,0,0,1,0,1,0,1,1,0,0,0,0,1,1,0,1,0,0,1,1,0,1,0,0,1,0,1,1,1,0,1,1,0,1,1,0,0,1,0,0,
+
+    };
+   
+
+    uint my_id = 0;
+    glGenBuffers(1, (GLuint*)&(my_id));
+    glBindBuffer(GL_ARRAY_BUFFER, my_id);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8 * 3, vertices, GL_STATIC_DRAW);
+
+    int my_indices = 0;
+    glGenBuffers(1, (GLuint*)&(my_indices));
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint) * 36, indices, GL_STATIC_DRAW);
+    
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glBindBuffer(GL_ARRAY_BUFFER, my_id);
+    glVertexPointer(3, GL_FLOAT, 0, NULL);
+    
+    glGenBuffers(1, (GLuint*)&(checkers_tex));
+    glBindBuffer(GL_RENDERBUFFER_BINDING, checkers_tex);
+    glBufferData(GL_RENDERBUFFER_BINDING, sizeof(uint) * 6 * 12, uv, GL_STATIC_DRAW);
+    
+    //glEnableClientState();
+    glBindBuffer(GL_ARRAY_BUFFER, my_id);
+    glVertexPointer(3, GL_FLOAT, 0, NULL);
+
+    //glBindTexture(GL_TEXTURE_2D, checkers_tex);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, NULL);

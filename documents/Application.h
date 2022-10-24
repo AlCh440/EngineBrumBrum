@@ -14,6 +14,7 @@
 #include "ModuleScene_01.h"
 #include "PerfTimer.h"
 #include "ModuleLoadFBX.h"
+#include "ModuleTextures.h"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ public:
 	ModuleCamera3D* camera;
 	ModuleScene_01* scene_01;
 	ModuleLoadFBX* loadfbx;
+	ModuleTextures* texturer;
 
 private:
 
@@ -68,9 +70,9 @@ private:
 	void SaveGame();
 	void LoadGame();
 
-	bool CreateFileRequest = false;
+	bool CreateFileRequest = true;
 	bool SaveGameRequest = false;
-	bool LoadGameRequest = true;
+	bool LoadGameRequest = false;
 
 public:
 	const char* nameOrg = NULL;

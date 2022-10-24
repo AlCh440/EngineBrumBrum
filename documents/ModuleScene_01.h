@@ -28,12 +28,12 @@ public:
 
 	update_status UpdateGeometry();
 	update_status UpdateEditor();
-	void DrawCube01();
+	void DrawCheckerCube01();
 	void DrawCube02();
 	void DrawCube03();
 	void DrawCubeArray();
 	void DrawCubeIndices();
-
+	void DrawCheckerCube();
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
 	bool Save() override;
 
@@ -55,7 +55,7 @@ public:
 	int width;
 	int height;
 
-
+	uint checkers_tex;
 };
 
 

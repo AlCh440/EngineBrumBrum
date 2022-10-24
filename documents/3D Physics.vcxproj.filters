@@ -624,6 +624,9 @@
     <ClInclude Include="Assimp\assimp\StandardShapes.h">
       <Filter>Sources\Assimp</Filter>
     </ClInclude>
+    <ClInclude Include="ModuleTextures.h">
+      <Filter>Sources\Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleAudio.cpp">
@@ -822,6 +825,9 @@
       <Filter>Sources\Tools\MathGeoLib\Time</Filter>
     </ClCompile>
     <ClCompile Include="ModuleLoadFBX.cpp">
+      <Filter>Sources\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleTextures.cpp">
       <Filter>Sources\Modules</Filter>
     </ClCompile>
   </ItemGroup>

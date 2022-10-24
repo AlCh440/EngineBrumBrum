@@ -25,7 +25,7 @@ Application::Application()
 	camera = new ModuleCamera3D(this);
 	scene_01 = new ModuleScene_01(this);
 	loadfbx = new ModuleLoadFBX(this);
-
+	texturer = new ModuleTextures(this);
 	// The order of calls is very important!
 	// Modules will Init() Start() and Update in this order
 	// They will CleanUp() in reverse order
@@ -39,6 +39,7 @@ Application::Application()
 	AddModule(scene_01);
 
 	// Renderer last!
+	AddModule(texturer);
 	AddModule(renderer3D);
 }
 
