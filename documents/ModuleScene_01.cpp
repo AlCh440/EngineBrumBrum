@@ -259,13 +259,97 @@ update_status ModuleScene_01::menuDisplay()
 
                 if (ImGui::BeginMenu("Hardware"))
                 {
-                    int SDL_GetSystemRAM(void);
-                    int SDL_GetCPUCacheLineSize(void);
-                    int SDL_GetCPUCount(void);
+                    SDL_version linked;
+                    SDL_GetVersion(&linked);
 
-                    SDL_Log("System RAM: %d", SDL_GetSystemRAM());
-                    SDL_Log("CPU Cache Line Size: %d", SDL_GetCPUCacheLineSize());
-                    SDL_Log("Number of logical CPU cores: %d", SDL_GetCPUCount());
+                    ImGui::Text("System: "); { ImGui::SameLine(); ImGui::TextColored(ImVec4(1.0f, 1.4f, 0.0f, 1.0f), "%s", SDL_GetPlatform()); }
+                    ImGui::Text("SDL Version: "); { ImGui::SameLine(); ImGui::TextColored(ImVec4(1.0f, 1.4f, 0.0f, 1.0f), "%u.%u.%u", linked.major, linked.minor, linked.patch); }
+
+                    ImGui::Separator();
+
+                    ImGui::Text("CPU cores: "); { ImGui::SameLine(); ImGui::TextColored(ImVec4(1.0f, 1.4f, 0.0f, 1.0f), "%d", SDL_GetCPUCount()); }
+                    ImGui::Text("RAM: "); { ImGui::SameLine(); ImGui::TextColored(ImVec4(1.0f, 1.4f, 0.0f, 1.0f), "%.2f GB", SDL_GetSystemRAM() / 1024.0f); }
+
+                    ImGui::Text("Caps: ");
+                    if (SDL_HasRDTSC() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::SameLine();
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "RDTSC,");
+                    }
+                    if (SDL_HasMMX() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::SameLine();
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "MMX,");
+                    }
+                    if (SDL_HasSSE() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::SameLine();
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "SSE,");
+                    }
+                    if (SDL_HasSSE2() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::SameLine();
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "SSE2,");
+                    }
+                    if (SDL_HasSSE3() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "SSE3,");
+                    }
+                    if (SDL_HasSSE41() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::SameLine();
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "SSE41,");
+                    }
+                    if (SDL_HasSSE42() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::SameLine();
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "SSE41,");
+                    }
+                    if (SDL_HasAVX() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::SameLine();
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "AVX,");
+                    }
+                    if (SDL_HasAVX2() == SDL_bool::SDL_TRUE)
+                    {
+                        ImGui::SameLine();
+                        ImGui::TextColored(ImVec4(1, 1, 0, 1), "AVX2");
+                    }
+
+                    ImGui::Separator();
+
+                    const GLubyte* vendor = glGetString(GL_VENDOR);
+                    const GLubyte* renderer = glGetString(GL_RENDERER);
+
+                    ImGui::Text("GPU:");
+                    ImGui::SameLine();
+                    ImGui::TextColored(ImVec4(1, 1, 0, 1), "%s", vendor);
+
+                    ImGui::Text("Brand:");
+                    ImGui::SameLine();
+                    ImGui::TextColored(ImVec4(1, 1, 0, 1), "%s", renderer);
+
+                    GLint parameter = 0;
+                    glGetIntegerv(GL_GPU_MEMORY_INFO_TOTAL_AVAILABLE_MEMORY_NVX, &parameter);
+                    ImGui::Text("VRAM budget:");
+                    ImGui::SameLine();
+                    ImGui::TextColored(ImVec4(1, 1, 0, 1), "%d Mb", parameter / 1024);
+                    glGetIntegerv(GL_GPU_MEMORY_INFO_EVICTION_COUNT_NVX, &parameter);
+                    ImGui::Text("VRAM usage:");
+                    ImGui::SameLine();
+                    ImGui::TextColored(ImVec4(1, 1, 0, 1), "%d Mb", parameter / 1024);
+
+                    glGetIntegerv(GL_GPU_MEMORY_INFO_CURRENT_AVAILABLE_VIDMEM_NVX, &parameter);
+                    ImGui::Text("VRAM available:");
+                    ImGui::SameLine();
+                    ImGui::TextColored(ImVec4(1, 1, 0, 1), "%d Mb", parameter / 1024);
+
+                    glGetIntegerv(GL_GPU_MEMORY_INFO_EVICTED_MEMORY_NVX, &parameter);
+                    ImGui::Text("VRAM reserved:");
+                    ImGui::SameLine();
+                    ImGui::TextColored(ImVec4(1, 1, 0, 1), "%d Mb", parameter / 1024);
+
+                   
                     
                     
 

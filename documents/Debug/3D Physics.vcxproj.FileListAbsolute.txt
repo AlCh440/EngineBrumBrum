@@ -3,6 +3,6 @@ C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Debug\3D Phy
 C:\Users\albertcf5\Documents\GitHub\EngineBrumBrum\documents\Debug\3D Physics - class5.exe
 C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\Debug\3D Physics - class5.exe
 C:\Users\juanam15\Documents\GitHub\EngineBrumBrum\documents\Debug\3D Physics - class5.exe
-C:\GitHub\EngineBrumBrum\documents\Debug\Game\3D Physics - class5.pdb
 C:\GitHub\EngineBrumBrum\documents\Debug\3D Physics - class5.exe
 C:\GitHub\EngineBrumBrum\documents\Debug\3D Physics - class5.pdb
+C:\GitHub\EngineBrumBrum\documents\Game\3D Physics - class5.pdb

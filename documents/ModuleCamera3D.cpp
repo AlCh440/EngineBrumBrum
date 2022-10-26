@@ -95,6 +95,22 @@ update_status ModuleCamera3D::Update(float dt)
 		Position = Reference + Z * length(Position);
 	}
 
+	if (App->input->GetMouseZ() > 0)
+	{
+		// dezoom
+		newPos -= Z * speed;
+	}
+	if (App->input->GetMouseZ() < 0)
+	{
+		//zoom
+		newPos += Z * speed;
+
+	}
+	
+	Position += newPos;
+	Reference += newPos;
+
+
 	// Recalculate matrix -------------
 	CalculateViewMatrix();
 
