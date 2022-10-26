@@ -258,6 +258,7 @@
     <ClInclude Include="MathGeoLib-master\src\Math\TransformOps.h" />
     <ClInclude Include="MathGeoLib-master\src\Math\vec2d.h" />
     <ClInclude Include="MathGeoLib-master\src\Time\Clock.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="ModuleCamera3D.h" />
     <ClInclude Include="ModuleLoadFBX.h" />
     <ClInclude Include="ModuleRenderer3D.h" />
@@ -328,6 +329,7 @@
     <ClCompile Include="MathGeoLib-master\src\Math\SSEMath.cpp" />
     <ClCompile Include="MathGeoLib-master\src\Math\TransformOps.cpp" />
     <ClCompile Include="MathGeoLib-master\src\Time\Clock.cpp" />
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="ModuleAudio.cpp" />
     <ClCompile Include="ModuleCamera3D.cpp" />
     <ClCompile Include="ModuleInput.cpp" />

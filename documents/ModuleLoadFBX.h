@@ -1,4 +1,6 @@
 #pragma once
+#include "Mesh.h"
+
 struct PhysBody3D;
 struct PhysMotor3D;
 struct aiNode;
@@ -21,7 +23,7 @@ public:
 	void LoadNode(aiNode* nextNode, aiScene* scene);
 	void LoadFile(const char* file_path);
 
-	
+	std::vector<Mesh> meshes;
 };
 
 

@@ -12,7 +12,10 @@ C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.
 C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(232,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
 C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(249,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
 C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(257,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+  Light.cpp
+  log.cpp
   Main.cpp
+  Mesh.cpp
   ModuleAudio.cpp
   ModuleCamera3D.cpp
   ModuleInput.cpp
@@ -38,5 +41,6 @@ C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_
 C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(253,26): warning C4101: 'title': unreferenced local variable
   ModuleTextures.cpp
   ModuleWindow.cpp
+  Timer.cpp
   Generating Code...
   3D Physics.vcxproj -> C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Game\3D Physics - class5.exe

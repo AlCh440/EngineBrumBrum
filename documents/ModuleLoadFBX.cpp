@@ -72,7 +72,12 @@ void ModuleLoadFBX::LoadNode(aiNode* nextNode, aiScene* scene)
     for (int i = 0; i < nextNode->mNumMeshes; i++)
     {
         aiMesh* aux = scene->mMeshes[nextNode->mMeshes[i]];
-        //aux
+        //process mesh!!!
+    }
+
+    for (unsigned int i = 0; i < nextNode->mNumChildren; i++)
+    {
+        LoadNode(nextNode->mChildren[i], scene);
     }
 }
 

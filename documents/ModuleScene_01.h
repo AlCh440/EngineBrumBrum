@@ -9,10 +9,7 @@
 
 struct PhysBody3D;
 struct PhysMotor3D;
-struct float3
-{
-	float x, y, z;
-};
+
 class ModuleScene_01 : public Module
 {
 public:
