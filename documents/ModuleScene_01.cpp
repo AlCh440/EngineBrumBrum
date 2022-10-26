@@ -248,8 +248,24 @@ update_status ModuleScene_01::menuDisplay()
             if (ImGui::BeginMenu("Application"))
             {
                 char title[25];
+                if (ImGui::BeginMenu("Frame Counter"))
+                {
+                    char title[25];
 
-                //sprintf_s(title, 25, "Frame rate %.1f", fps_log[fps_log.size() - 1]);
+                    //sprintf_s(title, 25, "Frame rate %.1f", fps_log[fps_log.size() - 1]);
+
+                    ImGui::EndMenu();
+                }
+
+                if (ImGui::BeginMenu("Hardware"))
+                {
+
+                    
+
+                    ImGui::EndMenu();
+                }
+
+
                 ImGui::EndMenu();
             }
 
@@ -450,12 +466,12 @@ update_status ModuleScene_01::menuDisplay()
 
     if (activateLightning == true)
     {
-
+        glEnable(GL_LIGHTING);
     }
 
     if (activateColorMaterial == true)
     {
-     
+        glEnable(GL_COLOR_MATERIAL);
     }
 
     if (activateTexture2D == true)
@@ -504,6 +520,9 @@ update_status ModuleScene_01::menuDisplay()
         glBindTexture(GL_TEXTURE_2D, texture);
        // glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+       
+        glEnable(GL_TEXTURE_2D);
+
 
     
 
