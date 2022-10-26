@@ -928,37 +928,48 @@ void ModuleScene_01::DrawCheckerCube()
        0,1,4,    1,5,4
     };
 
-    int uv[] = {
-        0,0,0,1,1,1,0,0,1,1,1,0,0,1,0,0,1,0,1,0,1,1,0,1,1,1,0,1,1,0,0,1,0,0,1,0,1,0,1,1,0,0,0,0,1,1,0,1,0,0,1,1,0,1,0,0,1,0,1,1,1,0,1,1,0,1,1,0,0,1,0,0,
-
-    };
+    //int uv[] = {
+    //    0,0,0,1,1,1,0,0,1,1,1,0,0,1,0,0,1,0,1,0,1,1,0,1,1,1,0,1,1,0,0,1,0,0,1,0,1,0,1,1,0,0,0,0,1,1,0,1,0,0,1,1,0,1,0,0,1,0,1,1,1,0,1,1,0,1,1,0,0,1,0,0,
+    //
+    //};
    
-
+    int uv[] = {
+        0, 0, 0, 1, 1, 1,
+    };
+    
+    glVertexPointer(3, GL_FLOAT, 0, NULL);
     uint my_id = 0;
     glGenBuffers(1, (GLuint*)&(my_id));
     glBindBuffer(GL_ARRAY_BUFFER, my_id);
     glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8 * 3, vertices, GL_STATIC_DRAW);
+
+    //glBindBuffer(GL_ARRAY_BUFFER, my_id);
+    
 
     int my_indices = 0;
     glGenBuffers(1, (GLuint*)&(my_indices));
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint) * 36, indices, GL_STATIC_DRAW);
     
+    
+   
+    glBindTexture(GL_TEXTURE_2D, checkers_tex);
+
+    glVertexPointer(2, GL_INT, 0, NULL);
+    uint my_uv = 0;
+    glGenBuffers(1, (GLuint*)&(my_uv));
+    
+    glBindBuffer(GL_TEXTURE_BUFFER, my_uv);
+    glBufferData(GL_TEXTURE_BUFFER, sizeof(uint) * 6, uv, GL_STATIC_DRAW);
+    
+    glVertexPointer(3, GL_FLOAT, 0, NULL);
+    
+    
+    
+
     glEnableClientState(GL_VERTEX_ARRAY);
-    glBindBuffer(GL_ARRAY_BUFFER, my_id);
-    glVertexPointer(3, GL_FLOAT, 0, NULL);
-    
-    glGenBuffers(1, (GLuint*)&(checkers_tex));
-    glBindBuffer(GL_RENDERBUFFER_BINDING, checkers_tex);
-    glBufferData(GL_RENDERBUFFER_BINDING, sizeof(uint) * 6 * 12, uv, GL_STATIC_DRAW);
-    
-    //glEnableClientState();
-    glBindBuffer(GL_ARRAY_BUFFER, my_id);
-    glVertexPointer(3, GL_FLOAT, 0, NULL);
-
-    //glBindTexture(GL_TEXTURE_2D, checkers_tex);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
+    //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_indices);
+    //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, my_uv);
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, NULL);
 
     //glDrawArrays(GL_TRIANGLES, 0, 8);

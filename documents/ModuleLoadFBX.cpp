@@ -33,7 +33,7 @@ bool ModuleLoadFBX::Start()
     stream = aiGetPredefinedLogStream(aiDefaultLogStream_DEBUGGER, nullptr);
     aiAttachLogStream(&stream);
 
-    const char* filepath = ("documents\Game\Assets");
+    const char* filepath = ("GitHub\EngineBrumBrum\documents\Game\Assets\BakerHouse.bfx");
     LoadFile(filepath);
     return ret;
 }
