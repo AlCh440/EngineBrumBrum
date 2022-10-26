@@ -259,7 +259,14 @@ update_status ModuleScene_01::menuDisplay()
 
                 if (ImGui::BeginMenu("Hardware"))
                 {
+                    int SDL_GetSystemRAM(void);
+                    int SDL_GetCPUCacheLineSize(void);
+                    int SDL_GetCPUCount(void);
 
+                    SDL_Log("System RAM: %d", SDL_GetSystemRAM());
+                    SDL_Log("CPU Cache Line Size: %d", SDL_GetCPUCacheLineSize());
+                    SDL_Log("Number of logical CPU cores: %d", SDL_GetCPUCount());
+                    
                     
 
                     ImGui::EndMenu();

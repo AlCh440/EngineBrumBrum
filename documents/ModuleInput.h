@@ -66,6 +66,9 @@ private:
 	int mouse_z;
 	int mouse_x_motion;
 	int mouse_y_motion;
+	int speed = 0;
+	int newPos;
+	int Z = 0;
 
 	SDL_Event e;
 	//int mouse_z_motion;

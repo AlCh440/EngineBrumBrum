@@ -83,6 +83,16 @@ update_status ModuleInput::PreUpdate(float dt)
 		}
 	}
 
+	if (App->input->GetMouseZ() > 0)
+	{
+		newPos -= Z * speed;
+	}
+
+	if (App->input->GetMouseZ() > 0)
+	{
+		newPos += Z * speed;
+	}
+
 	mouse_x_motion = mouse_y_motion = 0;
 
 	bool quit = false;
