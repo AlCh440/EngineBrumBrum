@@ -33,7 +33,7 @@ bool ModuleLoadFBX::Start()
     stream = aiGetPredefinedLogStream(aiDefaultLogStream_DEBUGGER, nullptr);
     aiAttachLogStream(&stream);
 
-    const char* filepath = ("GitHub\EngineBrumBrum\documents\Game\Assets\BakerHouse.bfx");
+    const char* filepath = ("Assets/BakerHouse.fbx");
     LoadFile(filepath);
     return ret;
 }
@@ -67,6 +67,15 @@ bool ModuleLoadFBX::Save()
     return true;
 }
 
+void ModuleLoadFBX::LoadNode(aiNode* nextNode, aiScene* scene)
+{
+    for (int i = 0; i < nextNode->mNumMeshes; i++)
+    {
+        aiMesh* aux = scene->mMeshes[nextNode->mMeshes[i]];
+        //aux
+    }
+}
+
 void ModuleLoadFBX::LoadFile(const char* file_path)
 {
     const aiScene* scene = aiImportFile(file_path, aiProcessPreset_TargetRealtime_MaxQuality);
@@ -76,6 +85,7 @@ void ModuleLoadFBX::LoadFile(const char* file_path)
     if (scene != nullptr  && scene->HasMeshes())
     {
         // Use scene->mNumMeshes to iterate on scene->mMeshes array
+       
         aiReleaseImport(scene);
     }
     else
