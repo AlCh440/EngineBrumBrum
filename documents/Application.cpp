@@ -35,8 +35,8 @@ Application::Application()
 	AddModule(camera);
 	AddModule(input);
 	AddModule(audio);
-	AddModule(loadfbx);
 	AddModule(scene_01);
+	AddModule(loadfbx);
 
 	// Renderer last!
 	AddModule(texturer);

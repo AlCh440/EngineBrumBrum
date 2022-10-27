@@ -114,6 +114,7 @@ bool ModuleScene_01::Start()
 
     checkers_tex = App->texturer->LoadCheckerTex();
  
+    glewInit();
 	return ret;
 }
 
@@ -626,7 +627,7 @@ update_status ModuleScene_01::menuDisplay()
 
 void ModuleScene_01::testOpenGL()
 {
-    glewInit();
+    
     //plane
     glLineWidth(1.0f);
 
@@ -643,7 +644,7 @@ void ModuleScene_01::testOpenGL()
     }
     glEnd();
 
-    DrawCheckerCube();
+    //DrawCheckerCube();
 }
 
 update_status ModuleScene_01::UpdateGeometry()
@@ -962,7 +963,7 @@ void ModuleScene_01::DrawCubeArray()
 
 
 
-    glRotatef(0.1f, 1.0f, 1.0f, 0.0f);
+    
 
     glEnableClientState(GL_VERTEX_ARRAY);
     glBindBuffer(GL_ARRAY_BUFFER, my_id);

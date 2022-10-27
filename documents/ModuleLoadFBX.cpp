@@ -50,7 +50,7 @@ bool ModuleLoadFBX::CleanUp()
 // Update
 update_status ModuleLoadFBX::Update(float dt)
 {
-   
+    meshes.front().Draw();
 
     return UPDATE_CONTINUE;
 }
@@ -67,18 +67,51 @@ bool ModuleLoadFBX::Save()
     return true;
 }
 
-void ModuleLoadFBX::LoadNode(aiNode* nextNode, aiScene* scene)
+void ModuleLoadFBX::LoadNode(aiNode* nextNode, const aiScene* scene)
 {
     for (int i = 0; i < nextNode->mNumMeshes; i++)
     {
         aiMesh* aux = scene->mMeshes[nextNode->mMeshes[i]];
-        //process mesh!!!
+        meshes.push_back(LoadMesh(aux, scene));
     }
 
     for (unsigned int i = 0; i < nextNode->mNumChildren; i++)
     {
         LoadNode(nextNode->mChildren[i], scene);
     }
+}
+
+Mesh ModuleLoadFBX::LoadMesh(aiMesh* mesh, const aiScene* scene)
+{
+
+    //temporary varaibles to store the mesh data
+    std::vector<Vertex> vertices;
+    std::vector<int> indices;
+ 
+
+    for (unsigned int i = 0; i < mesh->mNumVertices; i++)
+    {
+        Vertex vertex;
+        float3 vector;
+        vector.x = mesh->mVertices[i].x;
+        vector.y = mesh->mVertices[i].y;
+        vector.z = mesh->mVertices[i].z;
+        vertex.Pos = vector;
+
+
+        vertices.push_back(vertex);
+    }
+
+    for (unsigned int i = 0; i < mesh->mNumFaces; i++)
+    {
+        aiFace face = mesh->mFaces[i];
+        for (unsigned int j = 0; j < face.mNumIndices; j++)
+            indices.push_back(face.mIndices[j]);
+    }
+
+
+
+    return Mesh(vertices, indices);
 }
 
 void ModuleLoadFBX::LoadFile(const char* file_path)
@@ -90,7 +123,7 @@ void ModuleLoadFBX::LoadFile(const char* file_path)
     if (scene != nullptr  && scene->HasMeshes())
     {
         // Use scene->mNumMeshes to iterate on scene->mMeshes array
-       
+        LoadNode(scene->mRootNode, scene);
         aiReleaseImport(scene);
     }
     else

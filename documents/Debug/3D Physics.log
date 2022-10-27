@@ -1,21 +1,19 @@
-﻿C:\visualstudio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  ModuleCamera3D.cpp
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(500,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   ModuleScene_01.cpp
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(33,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(33,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(34,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(34,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(43,23): warning C4018: '<': signed/unsigned mismatch
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(43,51): warning C4018: '<': signed/unsigned mismatch
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(44,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(44,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(45,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(45,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(46,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(46,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(62,23): warning C4018: '<': signed/unsigned mismatch
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(62,51): warning C4018: '<': signed/unsigned mismatch
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(250,22): warning C4101: 'title': unreferenced local variable
-C:\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(253,26): warning C4101: 'title': unreferenced local variable
-  Generating Code...
-  3D Physics.vcxproj -> C:\GitHub\EngineBrumBrum\documents\\Game\3D Physics - class5.exe
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(33,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(33,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(34,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(34,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(43,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(43,51): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(44,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(44,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(45,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(45,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(46,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(46,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(62,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(62,51): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(251,22): warning C4101: 'title': unreferenced local variable
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(254,26): warning C4101: 'title': unreferenced local variable
+  3D Physics.vcxproj -> C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Game\3D Physics - class5.exe

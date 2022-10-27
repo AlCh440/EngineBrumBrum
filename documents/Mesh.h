@@ -4,7 +4,7 @@
 
 struct Vertex {
 	float3 Pos;
-	float3 Normal;
+	
 
 };
 
@@ -12,13 +12,18 @@ class Mesh
 {
 public:
 	// mesh data
-	std::vector<Vertex>       vertices;
+	std::vector<Vertex> vertices;
 	std::vector<int> indices;
 
-	Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices);
+	void LoadMesh();
+	void Draw();
+
+	Mesh(std::vector<Vertex> vertices, std::vector<int> indices);
 	~Mesh();
 
 private:
 	
+	uint vertexId = 0;
+	int indicesId = 0;
 
 };

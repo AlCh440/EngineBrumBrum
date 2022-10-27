@@ -5,6 +5,7 @@ struct PhysBody3D;
 struct PhysMotor3D;
 struct aiNode;
 struct aiScene;
+struct aiMesh;
 
 class ModuleLoadFBX : public Module
 {
@@ -19,9 +20,10 @@ public:
 
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
 	bool Save() override;
-	
-	void LoadNode(aiNode* nextNode, aiScene* scene);
+
+	void LoadNode(aiNode* nextNode, const aiScene* scene);
 	void LoadFile(const char* file_path);
+	Mesh LoadMesh(aiMesh* mesh, const aiScene* scene);
 
 	std::vector<Mesh> meshes;
 };
