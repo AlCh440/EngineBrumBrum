@@ -10,11 +10,9 @@ To access the main webpage of the Fountain Engine, click the following link:
 ## Members
 Fountain Engine is being programmed and created by two students from the CITM:
 
-·Albert Chica Ferrer
-Github: https://github.com/AlCh440
+·Albert Chica Ferrer // Github: https://github.com/AlCh440
 
-·Juan Fernando Almendro Marti
-Github: https://github.com/FernaToty
+·Juan Fernando Almendro Marti // Github: https://github.com/FernaToty
 ## Usability
 ## Additional Functionalities
 ## License
