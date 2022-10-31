@@ -21,6 +21,9 @@ public:
 private:
 
 	void CalculateViewMatrix();
+	void Zoom(const float& zoom_speed);
+
+	float zoomVel = 0.5f;
 
 public:
 	

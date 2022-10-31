@@ -55,6 +55,20 @@ update_status ModuleCamera3D::Update(float dt)
 	if(App->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT) newPos -= X * speed;
 	if(App->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT) newPos += X * speed;
 
+	if (App->input->GetKey(SDL_SCANCODE_F) == KEY_DOWN)
+	{
+		
+		if (zoomVel == 0) 
+		{
+
+		}
+		else
+		{
+			LookAt(0);
+		}
+	}
+
+
 	Position += newPos;
 	Reference += newPos;
 
@@ -95,20 +109,15 @@ update_status ModuleCamera3D::Update(float dt)
 		Position = Reference + Z * length(Position);
 	}
 
-	if (App->input->GetMouseZ() > 0)
-	{
-		// dezoom
-		newPos -= Z * speed;
-	}
-	if (App->input->GetMouseZ() < 0)
-	{
-		//zoom
-		newPos += Z * speed;
-
-	}
+	
 	
 	Position += newPos;
 	Reference += newPos;
+
+	if (App->input->GetMouseZ() != 0)
+	{
+		Zoom(zoomVel);
+	}
 
 
 	// Recalculate matrix -------------
@@ -162,6 +171,12 @@ void ModuleCamera3D::Move(const vec3 &Movement)
 float* ModuleCamera3D::GetViewMatrix()
 {
 	return &ViewMatrix;
+}
+
+void ModuleCamera3D::Zoom(const float& zoom_speed)
+{
+	Position -= Z * App->input->GetMouseZ() * zoomVel;
+	this->zoomVel = zoom_speed;
 }
 
 // -----------------------------------------------------------------
