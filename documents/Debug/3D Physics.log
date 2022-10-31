@@ -15,7 +15,7 @@ C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\Application.cpp(257,
   Main.cpp
   ModuleAudio.cpp
   ModuleCamera3D.cpp
-C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleCamera3D.cpp(188,39): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleCamera3D.cpp(180,39): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
   ModuleInput.cpp
   ModuleLoadFBX.cpp
 C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleLoadFBX.cpp(72,23): warning C4018: '<': no coinciden signed/unsigned
@@ -35,8 +35,8 @@ C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(4
 C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(46,27): warning C4244: 'inicializando': conversión de 'double' a 'const float'; posible pérdida de datos
 C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(62,23): warning C4018: '<': no coinciden signed/unsigned
 C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(62,51): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(251,22): warning C4101: 'title': variable local sin referencia
-C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(254,26): warning C4101: 'title': variable local sin referencia
+C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(253,22): warning C4101: 'title': variable local sin referencia
+C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\ModuleScene_01.cpp(256,26): warning C4101: 'title': variable local sin referencia
   ModuleTextures.cpp
   ModuleWindow.cpp
   Generando código...

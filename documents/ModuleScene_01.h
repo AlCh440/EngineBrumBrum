@@ -49,6 +49,13 @@ public:
 	bool activateColorMaterial = false;
 	bool activateTexture2D = false;
 
+	bool activateCube = false;
+	bool activatePyramid = false;
+	bool activateCone = false;
+	bool activateSphere = false;
+		
+
+
 	int width;
 	int height;
 

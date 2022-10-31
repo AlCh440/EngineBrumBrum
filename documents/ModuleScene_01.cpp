@@ -244,6 +244,8 @@ update_status ModuleScene_01::menuDisplay()
                 ImGui::EndMenu();
             }
 
+            
+
             // Vector3 fps_log;
 
             if (ImGui::BeginMenu("Application"))
@@ -441,6 +443,39 @@ update_status ModuleScene_01::menuDisplay()
 
             ImGui::EndMenu();
 
+        }
+
+        if (ImGui::BeginMenu("Objects"))
+        {
+            if (ImGui::Button("Cube"))
+            {
+                activateCube = !activateCube;
+
+                ImGui::EndMenu();
+            }
+
+            if (ImGui::Button("Pyramid"))
+            {
+                activatePyramid = !activatePyramid;
+
+                ImGui::EndMenu();
+            }
+
+            if (ImGui::Button("Cone"))
+            {
+                activateCone = !activateCone;
+
+                ImGui::EndMenu();
+            }
+
+            if (ImGui::Button("Sphere"))
+            {
+                activateSphere = !activateSphere;
+
+                ImGui::EndMenu();
+            }
+
+            ImGui::EndMenu();
         }
 
 
