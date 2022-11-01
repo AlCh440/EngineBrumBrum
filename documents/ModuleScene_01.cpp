@@ -709,7 +709,7 @@ update_status ModuleScene_01::UpdateEditor()
     ImGui_ImplSDL2_NewFrame(App->window->window);
     ImGui::NewFrame();
 
-    ImGui::ShowDemoWindow();
+    
 
     ret = menuDisplay();
     return ret;
