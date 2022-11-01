@@ -1,5 +1,8 @@
 #pragma once
 #include "Mesh.h"
+#include "Material.h"
+#include "Texture.h"
+#include <vector>
 
 struct PhysBody3D;
 struct PhysMotor3D;
@@ -24,8 +27,11 @@ public:
 	void LoadNode(aiNode* nextNode, const aiScene* scene);
 	void LoadFile(const char* file_path);
 	Mesh LoadMesh(aiMesh* mesh, const aiScene* scene);
+	Material LoadMaterial(aiMesh* mesh, const aiScene* scene);
+	//vector<Texture> LoadAllTextures(aiMaterial* mat, aiTextureType type, std::string typeName);
 
 	std::vector<Mesh> meshes;
+	std::vector<Material> materials;
 };
 
 

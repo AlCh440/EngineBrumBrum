@@ -17,7 +17,10 @@
 #include <gl/GL.h>
 #include <gl/GLU.h>
 #include <vector>
-                                                                                                                                        
+
+#include "Material.h"
+#include "Texture.h"
+
 ModuleLoadFBX::ModuleLoadFBX(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
     uint id_index = 0; // index in VRAM
@@ -42,7 +45,7 @@ bool ModuleLoadFBX::Start()
     stream = aiGetPredefinedLogStream(aiDefaultLogStream_DEBUGGER, nullptr);
     aiAttachLogStream(&stream);
 
-    const char* filepath = ("Assets/warrior.fbx");
+    const char* filepath = ("Assets/BakerHouse.fbx");
     LoadFile(filepath);
     return ret;
 }
@@ -107,20 +110,33 @@ Mesh ModuleLoadFBX::LoadMesh(aiMesh* mesh, const aiScene* scene)
     //temporary varaibles to store the mesh data
     std::vector<Vertex> vertices;
     std::vector<int> indices;
-    
+    std::vector<float2> uv;
 
+    
     for (unsigned int i = 0; i < mesh->mNumVertices; i++)
     {
         Vertex vertex;
         float3 vector;
+        float2 uv_coords;
+
         vector.x = mesh->mVertices[i].x;
         vector.y = mesh->mVertices[i].y;
         vector.z = mesh->mVertices[i].z;
         vertex.Pos = vector;
 
+        if (mesh->mTextureCoords[0]) // does the mesh contain texture coordinates?
+        {
+            float2 vec;
+            vec.x = mesh->mTextureCoords[0][i].x;
+            vec.y = mesh->mTextureCoords[0][i].y;
+            uv_coords = vec;
+        }
+        else
+            uv_coords = {0.0f, 0.0f};
 
+     
         vertices.push_back(vertex);
-        
+        uv.push_back(uv_coords);
     }
 
     for (unsigned int i = 0; i < mesh->mNumFaces; i++)
@@ -133,10 +149,35 @@ Mesh ModuleLoadFBX::LoadMesh(aiMesh* mesh, const aiScene* scene)
         }
     }
 
+    if (mesh->mMaterialIndex >= 0)
+    {
+        materials.push_back(LoadMaterial(mesh, scene));
+    }
 
+    
 
-    return Mesh(vertices, indices, mesh->mNumVertices, mesh->mNumFaces);
+    return Mesh(vertices, indices, uv, mesh->mNumVertices, mesh->mNumFaces);
 }
+
+Material ModuleLoadFBX::LoadMaterial(aiMesh* mesh, const aiScene* scene)
+{
+     std::vector<Texture> textures;
+    aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
+    
+
+   
+    return Material(textures);
+}
+
+
+
+//vector<Texture> ModuleLoadFBX::LoadAllTextures(aiMaterial* mat, aiTextureType type, std::string typeName)
+//{
+// 
+//    return textures();
+//}
+
+
 
 void ModuleLoadFBX::LoadFile(const char* file_path)
 {

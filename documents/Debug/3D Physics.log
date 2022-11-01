@@ -1,4 +1,52 @@
+<<<<<<< HEAD
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(500,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
   GameObject.cpp
 C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\GameObject.cpp(66,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   3D Physics.vcxproj -> C:\Users\Usuario1\Documents\GitHub\EngineBrumBrum\documents\Game\3D Physics - class5.exe
+=======
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(500,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Application.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(200,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1229,27): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1231,27): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1331,12): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1802,10): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\parson\include\parson.c(1862,10): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(92,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(139,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(145,47): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(232,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(249,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Application.cpp(257,46): warning C4805: '==': unsafe mix of type 'update_status' and type 'bool' in operation
+  Main.cpp
+  Mesh.cpp
+  ModuleAudio.cpp
+  ModuleCamera3D.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleCamera3D.cpp(180,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  ModuleInput.cpp
+  ModuleLoadFBX.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleLoadFBX.cpp(71,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleLoadFBX.cpp(95,23): warning C4018: '<': signed/unsigned mismatch
+  ModuleRenderer3D.cpp
+  ModuleScene_01.cpp
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(33,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(33,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(34,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(34,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(43,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(43,51): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(44,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(44,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(45,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(45,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(46,51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(46,27): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(62,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(62,51): warning C4018: '<': signed/unsigned mismatch
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(253,22): warning C4101: 'title': unreferenced local variable
+C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleScene_01.cpp(256,26): warning C4101: 'title': unreferenced local variable
+  ModuleTextures.cpp
+  ModuleWindow.cpp
+  Generating Code...
+  3D Physics.vcxproj -> C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Game\3D Physics - class5.exe
+>>>>>>> 5f7d1bc90f8af8b6cc9cc9d36fc2b07ba08ff7e7
