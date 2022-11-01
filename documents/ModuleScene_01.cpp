@@ -19,6 +19,10 @@
 
 #define GLVertexDD(idx) {float3& v = vertices[*idx - 1]; glVertex3f(v.x, v.y, v.z);}
 
+int ModuleScene_01::colorStyle = 3;
+float ModuleScene_01::colorWind[4] = { 0.4f, 0.7f, 0.0f, 1.0f };
+float ModuleScene_01::colorText[4] = { 0.9f, 0.0f, 1.0f, 1.0f };
+
 class SolidSphere
 {
 protected:
@@ -1133,6 +1137,54 @@ bool ModuleScene_01::Save()
     //json_object_set_boolean(json_object(data), "Wireframe", boolWireframe);
 
     return true;
+}
+
+void ModuleScene_01::ThemeStylePopUp()
+{
+    if (colorStyle == 2)
+    {
+        ImGui::PushStyleColor(ImGuiCol_PopupBg, ImVec4(0, 0, 0, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.f, 1.f, 1.f, 1.f));
+    }
+    else if (colorStyle == 1)
+    {
+        ImGui::PushStyleColor(ImGuiCol_PopupBg, ImVec4(1, 1, 1, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0, 0, 0, 1.f));
+    }
+    else if (colorStyle == 3)
+    {
+        ImGui::PushStyleColor(ImGuiCol_PopupBg, ImVec4(0.2f, 0.2f, 0.4f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.f, 1.f, 1.f, 1.f));
+    }
+    else if (ModuleScene_01::colorStyle == 4)
+    {
+        ImGui::PushStyleColor(ImGuiCol_PopupBg, ImVec4(colorWind[0], colorWind[1], colorWind[2], colorWind[3]));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(colorText[0], colorText[1], colorText[2], colorText[3]));
+    }
+}
+
+void ModuleScene_01::ThemeStyleWind()
+{
+    if (ModuleScene_01::colorStyle == 2)
+    {
+        ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.1f, 0.1f, 0.1f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.f, 1.f, 1.f, 1.f));
+    }
+    else if (ModuleScene_01::colorStyle == 1)
+    {
+        ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.9, 0.9, 0.9, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0, 0, 0, 1.f));
+    }
+    else if (ModuleScene_01::colorStyle == 3)
+    {
+        ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.1f, 0.1f, 0.3f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.f, 1.f, 1.f, 1.f));
+    }
+    else if (ModuleScene_01::colorStyle == 4)
+    {
+        ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(colorWind[0], colorWind[1], colorWind[2], colorWind[3]));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(colorText[0], colorText[1], colorText[2], colorText[3]));
+    }
 }
 
 

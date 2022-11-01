@@ -1,4 +1,5 @@
 #include "Mesh.h"
+#include "Application.h"
 
 #include "imgui.h"
 #include "imgui_impl_opengl3.h"
@@ -49,6 +50,20 @@ Mesh::Mesh(std::vector<Vertex> vertices, std::vector<int> indices, int num_verte
     LoadMesh();
 }
 
+
 Mesh::~Mesh()
 {
 }
+
+/*void Mesh::DeleteMesh(Mesh* m)
+{
+    for (size_t i = 0; i < meshes.size(); i++)
+    {
+        if (meshes[i] == m) {
+            meshes.erase(meshes.begin() + i);
+            delete m;
+            m = nullptr;
+            return;
+        }
+    }
+}*/
