@@ -27,7 +27,7 @@ void Mesh::LoadMesh()
 
     glGenBuffers(1, (GLuint*)&(uvId));
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, uvId);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(float) * uv_coords.size() * 2, &uv_coords.front(), GL_DYNAMIC_DRAW);
+    //glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(float) * uv_coords.size() * 2, &uv_coords.front(), GL_DYNAMIC_DRAW);
    //glEnableVertexAttribArray(0);
    // glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, &vertices.front());
    
