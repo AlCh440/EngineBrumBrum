@@ -42,7 +42,7 @@ bool ModuleLoadFBX::Start()
     stream = aiGetPredefinedLogStream(aiDefaultLogStream_DEBUGGER, nullptr);
     aiAttachLogStream(&stream);
 
-    const char* filepath = ("Assets/warrior.fbx");
+    const char* filepath = ("Assets/BakerHouse.fbx");
     LoadFile(filepath);
     return ret;
 }

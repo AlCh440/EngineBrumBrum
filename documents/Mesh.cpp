@@ -18,7 +18,7 @@ void Mesh::LoadMesh()
     glGenBuffers(1, (GLuint*)&(vertexId));
     glBindBuffer(GL_ARRAY_BUFFER, vertexId);
     glBufferData(GL_ARRAY_BUFFER, sizeof(float) * num_vertex * 3, &vertices.front(), GL_DYNAMIC_DRAW);
-
+    
    
     glGenBuffers(1, (GLuint*)&(indicesId));
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indicesId);
@@ -27,16 +27,18 @@ void Mesh::LoadMesh()
 
 void Mesh::Draw()
 {
- 
+
+	
+    
     glEnableClientState(GL_VERTEX_ARRAY);
-   // glBindBuffer(GL_ARRAY_BUFFER, vertexId);
-   glVertexPointer(3, GL_FLOAT, 0, NULL);
-   
+    // glBindBuffer(GL_ARRAY_BUFFER, vertexId);
+    glVertexPointer(3, GL_FLOAT, 0, &vertices);
+    
     glBindVertexArray(vertexId);
-    glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, num_index, GL_UNSIGNED_INT, NULL);
     glBindVertexArray(0);
     
-    glDisableClientState(GL_VERTEX_ARRAY);
+ glDisableClientState(GL_VERTEX_ARRAY);
 }
 
 Mesh::Mesh(std::vector<Vertex> vertices, std::vector<int> indices, int num_vertex, int num_index)

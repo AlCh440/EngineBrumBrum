@@ -1,5 +1,3 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(500,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  ModuleLoadFBX.cpp
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleLoadFBX.cpp(68,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\ModuleLoadFBX.cpp(92,23): warning C4018: '<': signed/unsigned mismatch
+  Mesh.cpp
   3D Physics.vcxproj -> C:\Users\achic\OneDrive\Documentos\motors_de_videojocs\SI\documents\Game\3D Physics - class5.exe
