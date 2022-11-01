@@ -9,11 +9,6 @@ struct Vertex {
 
 };
 
-<<<<<<< HEAD
-#define VERTEX_ARGUMENTS 5
-=======
->>>>>>> 5f7d1bc90f8af8b6cc9cc9d36fc2b07ba08ff7e7
-
 class Mesh 
 {
 public:
@@ -41,11 +36,10 @@ private:
 	
 	uint vertexId = 0;
 	int indicesId = 0;
-<<<<<<< HEAD
+
 
 	//vector<Mesh*> meshes;
 
-=======
 	uint uvId = 0;
->>>>>>> 5f7d1bc90f8af8b6cc9cc9d36fc2b07ba08ff7e7
+
 };
