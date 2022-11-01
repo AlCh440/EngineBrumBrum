@@ -683,7 +683,7 @@ void ModuleScene_01::testOpenGL()
     }
     glEnd();
 
-   //DrawCheckerCube();
+    //DrawCheckerCube();
 }
 
 update_status ModuleScene_01::UpdateGeometry()
@@ -1102,7 +1102,7 @@ void ModuleScene_01::DrawCheckerCube()
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(uint) * 36, indices, GL_STATIC_DRAW);
     
     
-   //glVertexAttribPointer()
+   
     glBindTexture(GL_TEXTURE_2D, checkers_tex);
 
     glVertexPointer(2, GL_INT, 0, NULL);

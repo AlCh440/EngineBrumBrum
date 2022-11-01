@@ -633,7 +633,6 @@
     <ClInclude Include="Mesh.h">
       <Filter>Sources\Components</Filter>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="GameObject.h">
       <Filter>Sources\Components</Filter>
     </ClInclude>
@@ -644,12 +643,6 @@
       <Filter>Sources\Components</Filter>
     </ClInclude>
     <ClInclude Include="Hierachy.h">
-=======
-    <ClInclude Include="Texture.h">
-      <Filter>Sources\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Material.h">
->>>>>>> 5f7d1bc90f8af8b6cc9cc9d36fc2b07ba08ff7e7
       <Filter>Sources\Components</Filter>
     </ClInclude>
   </ItemGroup>
@@ -858,7 +851,6 @@
     <ClCompile Include="Mesh.cpp">
       <Filter>Sources\Components</Filter>
     </ClCompile>
-<<<<<<< HEAD
     <ClCompile Include="GameObject.cpp">
       <Filter>Sources\Components</Filter>
     </ClCompile>
@@ -866,12 +858,6 @@
       <Filter>Sources\Components</Filter>
     </ClCompile>
     <ClCompile Include="Hierachycpp.cpp">
-=======
-    <ClCompile Include="Texture.cpp">
-      <Filter>Sources\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Material.cpp">
->>>>>>> 5f7d1bc90f8af8b6cc9cc9d36fc2b07ba08ff7e7
       <Filter>Sources\Components</Filter>
     </ClCompile>
   </ItemGroup>
