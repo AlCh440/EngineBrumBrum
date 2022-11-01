@@ -16,6 +16,8 @@
 #include "ModuleLoadFBX.h"
 #include "ModuleTextures.h"
 
+#include "Hierachy.h"
+
 using namespace std;
 
 
@@ -30,12 +32,19 @@ public:
 	ModuleScene_01* scene_01;
 	ModuleLoadFBX* loadfbx;
 	ModuleTextures* texturer;
+//	Mesh* meshRenderer;
+	HierarchyWindows* hierarchy;
+	
 
 private:
 
 	Timer	ms_timer;
 	float	dt;
 	list<Module*> list_modules;
+
+	
+	//static Application* app;
+
 public:
 
 	Application();
@@ -59,6 +68,8 @@ public:
 	bool FPSCapTo30 = false;
 	float averageFps = 0.0f;
 	int maxFrameRate = 30;
+
+	static Application* GetInstance();
 
 private:
 

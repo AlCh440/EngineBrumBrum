@@ -166,12 +166,15 @@
     <ClInclude Include="Assimp\assimp\XMLTools.h" />
     <ClInclude Include="Assimp\assimp\ZipArchiveIOSystem.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="glew\include\GL\eglew.h" />
     <ClInclude Include="glew\include\GL\glew.h" />
     <ClInclude Include="glew\include\GL\glxew.h" />
     <ClInclude Include="glew\include\GL\wglew.h" />
     <ClInclude Include="glmath.h" />
     <ClInclude Include="Globals.h" />
+    <ClInclude Include="Hierachy.h" />
     <ClInclude Include="imgui\include\imconfig.h" />
     <ClInclude Include="imgui\include\imgui.h" />
     <ClInclude Include="imgui\include\imgui_impl_opengl3.h" />
@@ -183,7 +186,6 @@
     <ClInclude Include="imgui\include\imstb_textedit.h" />
     <ClInclude Include="imgui\include\imstb_truetype.h" />
     <ClInclude Include="Light.h" />
-    <ClInclude Include="Material.h" />
     <ClInclude Include="MathGeoLib-master\src\Algorithm\GJK.h" />
     <ClInclude Include="MathGeoLib-master\src\Algorithm\GJK2D.h" />
     <ClInclude Include="MathGeoLib-master\src\Algorithm\Random\LCG.h" />
@@ -270,14 +272,16 @@
     <ClInclude Include="ModuleTextures.h" />
     <ClInclude Include="ModuleWindow.h" />
     <ClInclude Include="PerfTimer.h" />
-    <ClInclude Include="Texture.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Transform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Blue_tool.cpp" />
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="glmath.cpp" />
+    <ClCompile Include="Hierachycpp.cpp" />
     <ClCompile Include="imgui\include\imgui.cpp" />
     <ClCompile Include="imgui\include\imgui_demo.cpp" />
     <ClCompile Include="imgui\include\imgui_draw.cpp" />
@@ -289,7 +293,6 @@
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="log.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Material.cpp" />
     <ClCompile Include="MathGeoLib-master\src\Algorithm\GJK.cpp" />
     <ClCompile Include="MathGeoLib-master\src\Algorithm\GJK2D.cpp" />
     <ClCompile Include="MathGeoLib-master\src\Algorithm\Random\LCG.cpp" />
@@ -342,8 +345,8 @@
     <ClCompile Include="ModuleTextures.cpp" />
     <ClCompile Include="ModuleWindow.cpp" />
     <ClCompile Include="PerfTimer.cpp" />
-    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assimp\assimp\color4.inl" />

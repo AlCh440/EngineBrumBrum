@@ -26,6 +26,8 @@ Application::Application()
 	scene_01 = new ModuleScene_01(this);
 	loadfbx = new ModuleLoadFBX(this);
 	texturer = new ModuleTextures(this);
+	hierarchy = new HierarchyWindows(this);
+	//meshRenderer = new Mesh(this);
 	// The order of calls is very important!
 	// Modules will Init() Start() and Update in this order
 	// They will CleanUp() in reverse order
@@ -38,9 +40,15 @@ Application::Application()
 	AddModule(scene_01);
 	AddModule(loadfbx);
 
+	//AddModule(meshRenderer);
+	AddModule(hierarchy);
+
+
 	// Renderer last!
 	AddModule(texturer);
 	AddModule(renderer3D);
+
+	
 }
 
 Application::~Application()
@@ -83,6 +91,15 @@ bool Application::Init()
 	ms_timer.Start();
 	return ret;
 }
+
+/*Application* Application::GetInstance()
+{
+	if (app == nullptr)
+	{
+		app = new Application();
+	}
+	return app;
+}*/
 
 // ---------------------------------------------
 void Application::PrepareUpdate()

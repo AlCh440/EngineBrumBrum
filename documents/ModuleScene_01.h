@@ -34,6 +34,9 @@ public:
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
 	bool Save() override;
 
+	static void ThemeStyleWind();
+	static void ThemeStylePopUp();
+
 	bool myToolActive = true;
 	bool myTryActive = true;
 	bool closeButton = false;
@@ -54,12 +57,16 @@ public:
 	bool activateCone = false;
 	bool activateSphere = false;
 		
-
+	static int colorStyle;
 
 	int width;
 	int height;
 
 	uint checkers_tex;
+
+private:
+	static float colorWind[4];
+	static float colorText[4];
 };
 
 

@@ -633,10 +633,16 @@
     <ClInclude Include="Mesh.h">
       <Filter>Sources\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Texture.h">
+    <ClInclude Include="GameObject.h">
       <Filter>Sources\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Material.h">
+    <ClInclude Include="Transform.h">
+      <Filter>Sources\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Sources\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Hierachy.h">
       <Filter>Sources\Components</Filter>
     </ClInclude>
   </ItemGroup>
@@ -845,10 +851,13 @@
     <ClCompile Include="Mesh.cpp">
       <Filter>Sources\Components</Filter>
     </ClCompile>
-    <ClCompile Include="Texture.cpp">
+    <ClCompile Include="GameObject.cpp">
       <Filter>Sources\Components</Filter>
     </ClCompile>
-    <ClCompile Include="Material.cpp">
+    <ClCompile Include="Transform.cpp">
+      <Filter>Sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Hierachycpp.cpp">
       <Filter>Sources\Components</Filter>
     </ClCompile>
   </ItemGroup>
