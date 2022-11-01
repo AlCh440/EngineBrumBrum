@@ -8,6 +8,15 @@
 
 #pragma comment (lib, "Assimp/assimp/libx86/assimp-vc142-mt.lib")
 
+#include "imgui.h"
+#include "imgui_impl_opengl3.h"
+#include "imgui_impl_sdl.h"
+
+#include "glew/include/GL/glew.h"
+#include "SDL\include\SDL_opengl.h"
+#include <gl/GL.h>
+#include <gl/GLU.h>
+#include <vector>
                                                                                                                                         
 ModuleLoadFBX::ModuleLoadFBX(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
@@ -33,7 +42,7 @@ bool ModuleLoadFBX::Start()
     stream = aiGetPredefinedLogStream(aiDefaultLogStream_DEBUGGER, nullptr);
     aiAttachLogStream(&stream);
 
-    const char* filepath = ("Assets/BakerHouse.fbx");
+    const char* filepath = ("Assets/warrior.fbx");
     LoadFile(filepath);
     return ret;
 }
@@ -50,8 +59,19 @@ bool ModuleLoadFBX::CleanUp()
 // Update
 update_status ModuleLoadFBX::Update(float dt)
 {
-    meshes.front().Draw();
+    if (App->scene_01->boolWireframe)
+    {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    }
 
+    vector<Mesh>::iterator item = meshes.begin();
+    for (int i = 0; i < meshes.size(); i++)
+    {
+        item._Ptr->Draw();
+        item++;
+    }
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     return UPDATE_CONTINUE;
 }
 
@@ -87,7 +107,7 @@ Mesh ModuleLoadFBX::LoadMesh(aiMesh* mesh, const aiScene* scene)
     //temporary varaibles to store the mesh data
     std::vector<Vertex> vertices;
     std::vector<int> indices;
- 
+    
 
     for (unsigned int i = 0; i < mesh->mNumVertices; i++)
     {
@@ -100,18 +120,22 @@ Mesh ModuleLoadFBX::LoadMesh(aiMesh* mesh, const aiScene* scene)
 
 
         vertices.push_back(vertex);
+        
     }
 
     for (unsigned int i = 0; i < mesh->mNumFaces; i++)
     {
         aiFace face = mesh->mFaces[i];
         for (unsigned int j = 0; j < face.mNumIndices; j++)
+        {
             indices.push_back(face.mIndices[j]);
+            
+        }
     }
 
 
 
-    return Mesh(vertices, indices);
+    return Mesh(vertices, indices, mesh->mNumVertices, mesh->mNumFaces);
 }
 
 void ModuleLoadFBX::LoadFile(const char* file_path)
@@ -123,6 +147,8 @@ void ModuleLoadFBX::LoadFile(const char* file_path)
     if (scene != nullptr  && scene->HasMeshes())
     {
         // Use scene->mNumMeshes to iterate on scene->mMeshes array
+
+        
         LoadNode(scene->mRootNode, scene);
         aiReleaseImport(scene);
     }

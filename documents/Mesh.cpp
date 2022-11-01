@@ -17,35 +17,34 @@ void Mesh::LoadMesh()
     
     glGenBuffers(1, (GLuint*)&(vertexId));
     glBindBuffer(GL_ARRAY_BUFFER, vertexId);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertices.size() * 3, &vertices.front(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * num_vertex * 3, &vertices.front(), GL_DYNAMIC_DRAW);
 
    
     glGenBuffers(1, (GLuint*)&(indicesId));
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indicesId);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int) * indices.size(), &indices.front(), GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int) * num_index, &indices.front(), GL_DYNAMIC_DRAW);
 }
 
 void Mesh::Draw()
 {
-   
-
-    
-
+ 
     glEnableClientState(GL_VERTEX_ARRAY);
-    glBindBuffer(GL_ARRAY_BUFFER, vertexId);
-    glVertexPointer(3, GL_FLOAT, 0, NULL);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indicesId);
-    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, NULL);
-
-    //glDrawArrays(GL_TRIANGLES, 0, 8);
+   // glBindBuffer(GL_ARRAY_BUFFER, vertexId);
+   glVertexPointer(3, GL_FLOAT, 0, NULL);
+   
+    glBindVertexArray(vertexId);
+    glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
+    glBindVertexArray(0);
+    
     glDisableClientState(GL_VERTEX_ARRAY);
 }
 
-Mesh::Mesh(std::vector<Vertex> vertices, std::vector<int> indices)
+Mesh::Mesh(std::vector<Vertex> vertices, std::vector<int> indices, int num_vertex, int num_index)
 {
     this->vertices = vertices;
     this->indices = indices;
+    this->num_vertex = num_vertex;
+    this->num_index = num_index;
 
     LoadMesh();
 }
