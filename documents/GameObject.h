@@ -17,7 +17,7 @@ public:
 	bool isEnabled = true;
 	std::string name = "GameObject";
 
-	//Pointer to transform component
+
 	Transform* transform;
 
 	std::vector<GameObject*> childs;
@@ -28,24 +28,24 @@ public:
 	ComponentMesh* GetComponentMesh();
 	ComponentTexture* GetComponentTexture();
 
-	//Returns true if ALL parents are enabled
+	
 	bool isTotalEnabled();
 
 	GameObject* getParent();
 
-	//Returns true if <this> is under the GO hierarchy tree
+
 	bool isChildFrom(GameObject* GO);
 
-	//Adds GO child to current gameObject, returns false if <this> is in GO's hierarchy
+	
 	bool AddChild(GameObject* GO);
 
-	//Removes GO from childs vector, returns true if able to do, false if it's not child
+	
 	bool RemoveChild(GameObject* GO);
 
-	//Free <this> from parent, and set it to hierarchy child
+	
 	void Free();
 
-	//Move <this> to GOparent, returns false if parent is <this> child
+	
 	bool MoveToParent(GameObject* GOparent);
 
 private:
