@@ -33,6 +33,8 @@ Fountain Engine is being programmed and created by two students from the CITM:
 
 ·F Centers to object
 
+·CTRL S Save scene
+
 ## Additional Functionalities
 
 No information yet
