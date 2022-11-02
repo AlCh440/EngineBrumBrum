@@ -15,14 +15,22 @@ Fountain Engine is being programmed and created by two students from the CITM:
 ·Juan Fernando Almendro Martí // Github: https://github.com/FernaToty
 ## Controls
 
-#Movement controls:
+# Movement controls:
+
 ·W Move forward
+
 ·A Move left
+
 ·S Move backwards
+
 ·D Move right
+
 ·Shift Move faster
+
 ·Right click Rotate the screen
+
 ·Mouse Whell ZOOM
+
 ·F Centers to object
 
 ## Additional Functionalities
