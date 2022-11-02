@@ -15,7 +15,7 @@ Fountain Engine is being programmed and created by two students from the CITM:
 ·Juan Fernando Almendro Martí // Github: https://github.com/FernaToty
 ## Controls
 
-# Movement controls:
+### Movement controls:
 
 ·W Move forward
 
