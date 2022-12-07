@@ -6,7 +6,7 @@ This Engine has been created in the CITM subject "Engines" by 2 members in the 3
 
 This engine is completely free.
 
-To access the main webpage of the Fountain Engine, click the following link: 
+To access the main webpage of the Fountain Engine, click the following link: https://github.com/AlCh440/EngineBrumBrum/blob/main/README.md
 ## Members
 Fountain Engine is being programmed and created by two students from the CITM:
 
